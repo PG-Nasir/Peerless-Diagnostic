@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LabSalesCashStatement" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.9090909090909123"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA["select * ,'2017-11-09' as aStartDate,'2017-11-09' as aEndDate from TbLabSaleCashStatement('2017-11-08 23:59:00.000','2017-11-09 23:59:00.000','2017-11-09') where PatientType='Outdoor' order by DateOfBill,UserName,BillStatus"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql}]]>
+	</queryString>
+	<field name="BillNo" class="java.lang.String"/>
+	<field name="PatientName" class="java.lang.String"/>
+	<field name="PatientType" class="java.lang.String"/>
+	<field name="PaymentStatus" class="java.lang.String"/>
+	<field name="BillStatus" class="java.lang.String"/>
+	<field name="AmountReceived" class="java.math.BigDecimal"/>
+	<field name="DateOfBill" class="java.util.Date"/>
+	<field name="ReceivedTime" class="java.sql.Timestamp"/>
+	<field name="StartDate" class="java.sql.Timestamp"/>
+	<field name="EndDate" class="java.sql.Timestamp"/>
+	<field name="UserName" class="java.lang.String"/>
+	<field name="aStartDate" class="java.util.Date"/>
+	<field name="aEndDate" class="java.util.Date"/>
+	<variable name="vTlastAmt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{AmountReceived}]]></variableExpression>
+	</variable>
+	<variable name="tSl" class="java.lang.Integer" resetType="Group" resetGroup="UseGroup" calculation="Sum">
+		<variableExpression><![CDATA[1]]></variableExpression>
+	</variable>
+	<variable name="PAmount" class="java.lang.Double" resetType="Group" resetGroup="PayStatus" calculation="Sum">
+		<variableExpression><![CDATA[$F{AmountReceived}]]></variableExpression>
+	</variable>
+	<variable name="TCAmt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[( $F{BillStatus}.equals("Paid") ? $F{AmountReceived} : 0 )]]></variableExpression>
+	</variable>
+	<variable name="TRAmt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[( $F{BillStatus}.equals("Refund") ? $F{AmountReceived} : 0 )]]></variableExpression>
+	</variable>
+	<variable name="THAmt" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{TCAmt}-$V{TRAmt}]]></variableExpression>
+	</variable>
+	<variable name="BAmt" class="java.lang.Double" resetType="Group" resetGroup="BillStatus" calculation="Sum">
+		<variableExpression><![CDATA[$F{AmountReceived}]]></variableExpression>
+	</variable>
+	<variable name="UTCAmt" class="java.lang.Double" resetType="Group" resetGroup="UseGroup" calculation="Sum">
+		<variableExpression><![CDATA[( $F{BillStatus}.equals("Paid") ? $F{AmountReceived} : 0 )]]></variableExpression>
+	</variable>
+	<variable name="UTRAmt" class="java.lang.Double" resetType="Group" resetGroup="UseGroup" calculation="Sum">
+		<variableExpression><![CDATA[( $F{BillStatus}.equals("Refund") ? $F{AmountReceived} : 0 )]]></variableExpression>
+	</variable>
+	<variable name="UTHAmt" class="java.lang.Double" resetType="Group" resetGroup="UseGroup">
+		<variableExpression><![CDATA[$V{UTCAmt}-$V{UTRAmt}]]></variableExpression>
+	</variable>
+	<group name="UseGroup">
+		<groupExpression><![CDATA[$F{UserName}]]></groupExpression>
+		<groupHeader>
+			<band height="14">
+				<textField>
+					<reportElement x="0" y="0" width="146" height="14"/>
+					<box leftPadding="2"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{UserName}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="15">
+				<staticText>
+					<reportElement x="1" y="2" width="66" height="13"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sub Total]]></text>
+				</staticText>
+				<line>
+					<reportElement x="1" y="0" width="553" height="1"/>
+					<graphicElement>
+						<pen lineWidth="2.0" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement x="68" y="1" width="72" height="14"/>
+					<box leftPadding="2"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$V{tSl}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00">
+					<reportElement x="492" y="1" width="63" height="13"/>
+					<box rightPadding="2"/>
+					<textElement textAlignment="Right">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$V{UTHAmt}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="PayStatus">
+		<groupExpression><![CDATA[$F{PaymentStatus}]]></groupExpression>
+		<groupHeader>
+			<band height="12">
+				<textField>
+					<reportElement x="0" y="-2" width="147" height="14"/>
+					<box leftPadding="2"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{PaymentStatus}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="3"/>
+		</groupFooter>
+	</group>
+	<group name="BillStatus">
+		<groupExpression><![CDATA[$F{BillStatus}]]></groupExpression>
+		<groupHeader>
+			<band height="15">
+				<textField>
+					<reportElement x="0" y="1" width="146" height="14"/>
+					<box leftPadding="2"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( $F{BillStatus}.equals("Refund") ? $F{BillStatus} : "" )]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="15">
+				<textField pattern="#,##0.00">
+					<reportElement x="492" y="0" width="63" height="13"/>
+					<box rightPadding="2"/>
+					<textElement textAlignment="Right">
+						<font size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Double"><![CDATA[$V{BAmt}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="83" splitType="Stretch">
+			<rectangle>
+				<reportElement x="192" y="60" width="134" height="14" forecolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="192" y="60" width="134" height="14"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lab Cash Statement]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="446" y="65" width="51" height="14"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{aStartDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="377" y="64" width="73" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Statement For]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="510" y="65" width="69" height="14"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{aEndDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="497" y="64" width="13" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[To]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="17" width="556" height="13"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[654,O.R,Nilzam Road,G.E.C Circle,Chittagong]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="4" width="556" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEERLESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="30" width="557" height="13"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Phone:031620264,Mobile:01823-986447]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="23" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="149" y="1" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement x="280" y="1" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="22"/>
+			</line>
+			<staticText>
+				<reportElement x="150" y="1" width="69" height="22"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="1" width="60" height="22"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="430" y="1" width="1" height="22"/>
+			</line>
+			<line>
+				<reportElement x="491" y="1" width="1" height="22"/>
+			</line>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="492" y="1" width="63" height="22" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="219" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="23" y="1" width="1" height="22"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="1" width="22" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="431" y="1" width="60" height="22" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UserName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="281" y="1" width="149" height="22" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patient Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="1" width="125" height="22"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date/Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="14" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="555" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="149" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="280" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="430" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="491" y="0" width="1" height="15"/>
+			</line>
+			<textField>
+				<reportElement x="431" y="0" width="60" height="14"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UserName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="219" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-1" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement x="23" y="0" width="1" height="15"/>
+			</line>
+			<textField>
+				<reportElement x="1" y="0" width="22" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{tSl}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="492" y="0" width="63" height="14"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{AmountReceived}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="0" width="125" height="14"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{ReceivedTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="70" height="14"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BillNo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="220" y="0" width="60" height="14"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{DateOfBill}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="0" width="148" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PatientName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="385" y="0" width="70" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="154" y="0" width="179" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Developed By-www.cursorbd.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="20" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="11" width="66" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="8" width="553" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="492" y="11" width="63" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{THAmt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

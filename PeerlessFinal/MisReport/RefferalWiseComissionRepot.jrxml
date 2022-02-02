@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.9090909090909172"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Sl" class="java.lang.String"/>
+	<field name="RefferalName" class="java.lang.String"/>
+	<field name="TotalCharge" class="java.lang.Double"/>
+	<field name="Comission" class="java.lang.Double"/>
+	<field name="comissionam" class="java.lang.Double"/>
+	<variable name="Totalamount" class="java.lang.Double">
+		<variableExpression><![CDATA[]]></variableExpression>
+	</variable>
+	<group name="Labgroup">
+		<groupExpression><![CDATA[]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<rectangle>
+				<reportElement x="178" y="5" width="216" height="20" forecolor="#999999" backcolor="#CCCCCC"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="168" y="5" width="222" height="17"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="168" y="5" width="222" height="18"/>
+				<textElement>
+					<font size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[    Refferal Wise Comission Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="1" y="1" width="554" height="15"/>
+			</rectangle>
+			<line>
+				<reportElement mode="Opaque" x="69" y="1" width="1" height="15" forecolor="#666666"/>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="253" y="0" width="1" height="16" forecolor="#666666"/>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="352" y="0" width="1" height="16" forecolor="#666666"/>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="451" y="1" width="1" height="15" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement x="452" y="1" width="101" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comission Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="1" width="184" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Refferal Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="1" width="62" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="1" width="100" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Bill]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="1" width="98" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comission (%)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="1" y="0" width="554" height="15" isPrintWhenDetailOverflows="true"/>
+			</rectangle>
+			<line>
+				<reportElement mode="Opaque" x="69" y="0" width="1" height="15" forecolor="#666666"/>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="253" y="0" width="1" height="15" forecolor="#666666"/>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="352" y="-1" width="1" height="16" forecolor="#666666"/>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="451" y="-1" width="1" height="16" forecolor="#666666"/>
+			</line>
+			<textField>
+				<reportElement x="10" y="1" width="59" height="14"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Sl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="1" width="182" height="14"/>
+				<box leftPadding="3"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{RefferalName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="254" y="0" width="98" height="15"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{TotalCharge}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="354" y="1" width="97" height="14"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{Comission}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="453" y="1" width="90" height="14"/>
+				<box rightPadding="0"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{comissionam}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="3" splitType="Stretch"/>
+	</summary>
+</jasperReport>

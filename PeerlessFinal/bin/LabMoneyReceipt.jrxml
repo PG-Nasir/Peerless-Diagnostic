@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LabMoneyReceipt" language="groovy" pageWidth="396" pageHeight="560" columnWidth="396" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.6105100000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["src\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA["select LabId as BillId,Fiscalyear as FiscalYear,'1' as Type from TbLabPatient where labId='34' and FiscalYear='2020' union ALL select LabId as BillId,Fiscalyear as FiscalYear,'2' as Type from TbLabPatient where labId='34' and FiscalYear='2020' "]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql}]]>
+	</queryString>
+	<field name="BillId" class="java.lang.Integer"/>
+	<field name="FiscalYear" class="java.lang.String"/>
+	<field name="Type" class="java.lang.String"/>
+	<group name="TypeGp" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{Type}]]></groupExpression>
+		<groupHeader>
+			<band height="5">
+				<subreport>
+					<reportElement x="0" y="0" width="396" height="1">
+						<printWhenExpression><![CDATA[$F{Type}.equals("1")?true:false]]></printWhenExpression>
+					</reportElement>
+					<subreportParameter name="SUBREPORT_DIR"/>
+					<subreportParameter name="sql"/>
+					<subreportParameter name="FiscalYear">
+						<subreportParameterExpression><![CDATA[$F{FiscalYear}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="BillId">
+						<subreportParameterExpression><![CDATA[$F{BillId}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"PatientLabMoneyReceipte.jasper"]]></subreportExpression>
+				</subreport>
+				<subreport>
+					<reportElement x="3" y="4" width="396" height="1">
+						<printWhenExpression><![CDATA[$F{Type}.equals("2")?true:false]]></printWhenExpression>
+					</reportElement>
+					<subreportParameter name="SUBREPORT_DIR"/>
+					<subreportParameter name="sql"/>
+					<subreportParameter name="FiscalYear">
+						<subreportParameterExpression><![CDATA[$F{FiscalYear}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="BillId">
+						<subreportParameterExpression><![CDATA[$F{BillId}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR}+"LabSlipFullPage.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

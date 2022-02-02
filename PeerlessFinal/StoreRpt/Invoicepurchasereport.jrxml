@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="388" pageHeight="576" columnWidth="348" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="9">
+	<property name="ireport.zoom" value="1.500000000000007"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="92"/>
+	<parameter name="sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA["select TbStoreTransectionDetails.invoiceNo,TbStoreTransectionDetails.productId,TbStoreTransectionDetails.productName,TbStoreTransectionDetails.unit,TbStoreTransectionDetails.qty,TbStoreTransectionDetails.buyPrice,TbStoreTransectionDetails.totalPrice,TbStoreTransectionInvoice.BillNo,(select supplierName from tbSupplierInfo where supplierId=TbStoreTransectionInvoice.PersionId) as Supplier,TbStoreTransectionInvoice.type,TbStoreTransectionInvoice.date,TbStoreTransectionInvoice.amount,TbStoreTransectionInvoice.discount,TbStoreTransectionInvoice.netAmount,TbStoreTransectionInvoice.cash,TbStoreTransectionInvoice.card, (select username from tblogin where user_id=TbStoreTransectionInvoice.createBy)as username from TbStoreTransectionInvoice join TbStoreTransectionDetails on TbStoreTransectionDetails.invoiceNo=TbStoreTransectionInvoice.invoiceNo  where TbStoreTransectionInvoice.type=1 and TbStoreTransectionInvoice.invoiceNo='1' and TbStoreTransectionDetails.type=1"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{sql}]]>
+	</queryString>
+	<field name="invoiceNo" class="java.lang.Integer"/>
+	<field name="productId" class="java.lang.Integer"/>
+	<field name="productName" class="java.lang.String"/>
+	<field name="unit" class="java.lang.String"/>
+	<field name="qty" class="java.math.BigDecimal"/>
+	<field name="buyPrice" class="java.math.BigDecimal"/>
+	<field name="totalPrice" class="java.math.BigDecimal"/>
+	<field name="BillNo" class="java.lang.String"/>
+	<field name="Supplier" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="date" class="java.util.Date"/>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<field name="discount" class="java.math.BigDecimal"/>
+	<field name="netAmount" class="java.math.BigDecimal"/>
+	<field name="cash" class="java.math.BigDecimal"/>
+	<field name="card" class="java.math.BigDecimal"/>
+	<field name="username" class="java.lang.String"/>
+	<variable name="tquantity" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{qty}]]></variableExpression>
+	</variable>
+	<variable name="tprice" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{totalPrice}]]></variableExpression>
+	</variable>
+	<variable name="tdue" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{netAmount}-$F{cash}-$F{card}]]></variableExpression>
+	</variable>
+	<variable name="tsl" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[1]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="ReportType" class="java.lang.String">
+		<variableExpression><![CDATA[( $F{type}.equals("1") ? "Purchase Order Report" : "Purchase Return Report" )]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="130" y="49" width="90" height="16" forecolor="#FFFFFF" backcolor="#999999"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[( $F{type}.equals("1") ? "Purchase Order Report" : "Purchase Return Report" )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="18" width="346" height="13"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[654,O.R,Nilzam Road,G.E.C Circle,Chittagong]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="347" height="19"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IDEAL LAB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="31" width="346" height="13"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Phone:031620264,Mobile:01823-986447]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="-1" width="55" height="15"/>
+				<textElement>
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="34" width="55" height="15"/>
+				<textElement>
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[Supplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="-1" width="5" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="34" width="5" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="-1" width="5" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="-1" width="50" height="15"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="-1" width="122" height="15"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{invoiceNo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MM-yyyy">
+				<reportElement x="290" y="-1" width="57" height="15"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="34" width="122" height="15"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Supplier}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="16" width="55" height="15"/>
+				<textElement>
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<text><![CDATA[BIll No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="16" width="5" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="65" y="16" width="122" height="15"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BillNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="349" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="20" width="347" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="26" y="0" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="173" y="0" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="204" y="0" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="246" y="0" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="348" y="0" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="298" y="0" width="1" height="21"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="1" width="25" height="19" forecolor="#FFFFFF" backcolor="#999999"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="27" y="1" width="146" height="19" forecolor="#FFFFFF" backcolor="#999999"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRODUCT NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="174" y="1" width="30" height="19" forecolor="#FFFFFF" backcolor="#999999"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="205" y="1" width="41" height="19" forecolor="#FFFFFF" backcolor="#999999"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="247" y="1" width="51" height="19" forecolor="#FFFFFF" backcolor="#999999"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="299" y="1" width="49" height="19" forecolor="#FFFFFF" backcolor="#999999"/>
+				<box leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-1" width="349" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="19" width="348" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-1" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="26" y="-1" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="173" y="-1" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="204" y="-1" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="246" y="-1" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="348" y="-1" width="1" height="21"/>
+			</line>
+			<line>
+				<reportElement x="298" y="-1" width="1" height="21"/>
+			</line>
+			<textField>
+				<reportElement x="27" y="1" width="145" height="18"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="1" width="30" height="18"/>
+				<box leftPadding="2" rightPadding="3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{unit}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="205" y="1" width="41" height="19"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="247" y="1" width="51" height="19"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{buyPrice}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="299" y="1" width="49" height="19"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{totalPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="1" width="25" height="19"/>
+				<box leftPadding="4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{tsl}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="41" y="1" width="59" height="15"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Checked By]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="1" width="100" height="15"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Receiver Signature]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="26" width="348" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="224" y="27" width="56" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="286" y="27" width="63" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="27" width="122" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Developed By-www.cursorbd.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="27" width="97" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Store Purchase Confrimed By-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="267" y="27" width="20" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="157" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-1" width="349" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="16" width="349" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="17"/>
+			</line>
+			<line>
+				<reportElement x="298" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="348" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="0" y="16" width="349" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="32" width="347" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="16" width="1" height="17"/>
+			</line>
+			<line>
+				<reportElement x="298" y="17" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="348" y="17" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="0" y="32" width="349" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="32" width="1" height="17"/>
+			</line>
+			<line>
+				<reportElement x="298" y="33" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="348" y="33" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="0" y="48" width="349" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="1" width="100" height="15"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9"/>
+				</textElement>
+				<text><![CDATA[Gross Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="17" width="100" height="16"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9"/>
+				</textElement>
+				<text><![CDATA[Discount (Less)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="34" width="100" height="15"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="204" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="246" y="0" width="1" height="16"/>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="206" y="1" width="40" height="14"/>
+				<box leftPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{tquantity}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="299" y="1" width="50" height="15"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{tprice}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="299" y="17" width="50" height="15"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{discount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="299" y="34" width="50" height="15"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{netAmount}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="237" y="67" width="111" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="237" y="87" width="111" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="237" y="125" width="111" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="237" y="105" width="111" height="20"/>
+			</rectangle>
+			<line>
+				<reportElement x="298" y="67" width="1" height="78"/>
+			</line>
+			<staticText>
+				<reportElement x="237" y="68" width="62" height="19"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Net Payable]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="88" width="62" height="17"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Cash]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="107" width="62" height="18"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Card]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="127" width="62" height="18"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Due]]></text>
+			</staticText>
+			<textField pattern="#,##0.00">
+				<reportElement x="300" y="68" width="48" height="19"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{netAmount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="300" y="87" width="48" height="18"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{cash}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="300" y="107" width="48" height="18"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{card}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="300" y="126" width="48" height="19"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{tdue}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

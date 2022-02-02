@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.9330147604194715"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="147"/>
+	<field name="LabNo" class="java.lang.String"/>
+	<field name="PatientName" class="java.lang.String"/>
+	<field name="Age" class="java.lang.String"/>
+	<field name="Gender" class="java.lang.String"/>
+	<field name="OrderDate" class="java.lang.String"/>
+	<field name="ReportingDate" class="java.lang.String"/>
+	<field name="MainTestName" class="java.lang.String"/>
+	<field name="Sample" class="java.lang.String"/>
+	<field name="Consultant" class="java.lang.String"/>
+	<field name="Degree" class="java.lang.String"/>
+	<field name="TestName" class="java.lang.String"/>
+	<field name="Result" class="java.lang.String"/>
+	<field name="NormalRange" class="java.lang.String"/>
+	<field name="TestList" class="java.lang.String"/>
+	<field name="Flag" class="java.lang.String"/>
+	<field name="LabIncharge" class="java.lang.String"/>
+	<field name="CheckedBy" class="java.lang.String"/>
+	<field name="LabInchargeDegree" class="java.lang.String"/>
+	<field name="CheckedByDegree" class="java.lang.String"/>
+	<field name="DoctorName1" class="java.lang.String"/>
+	<field name="DoctorName1Degree" class="java.lang.String"/>
+	<field name="DoctorName2" class="java.lang.String"/>
+	<field name="DoctorName2Degree" class="java.lang.String"/>
+	<field name="AmikacinA" class="java.lang.String"/>
+	<field name="AmikacinB" class="java.lang.String"/>
+	<field name="AmoxycillinA" class="java.lang.String"/>
+	<field name="AmoxycillinB" class="java.lang.String"/>
+	<field name="AmoxyClaveA" class="java.lang.String"/>
+	<field name="AmoxyClaveB" class="java.lang.String"/>
+	<field name="AzithromkyciA" class="java.lang.String"/>
+	<field name="AzithromkyciB" class="java.lang.String"/>
+	<field name="AztreonamA" class="java.lang.String"/>
+	<field name="AztreonamB" class="java.lang.String"/>
+	<field name="CefaclorA" class="java.lang.String"/>
+	<field name="CefaclorB" class="java.lang.String"/>
+	<field name="CefeprimeA" class="java.lang.String"/>
+	<field name="CefeprimeB" class="java.lang.String"/>
+	<field name="CefiximeA" class="java.lang.String"/>
+	<field name="CefiximeB" class="java.lang.String"/>
+	<field name="CefotazimeA" class="java.lang.String"/>
+	<field name="CefotazimeB" class="java.lang.String"/>
+	<field name="CefoxitinA" class="java.lang.String"/>
+	<field name="CefoxitinB" class="java.lang.String"/>
+	<field name="CeftaidimeA" class="java.lang.String"/>
+	<field name="CeftaidimeB" class="java.lang.String"/>
+	<field name="CeftraixoneA" class="java.lang.String"/>
+	<field name="CeftraixoneB" class="java.lang.String"/>
+	<field name="CefuroximeA" class="java.lang.String"/>
+	<field name="CefuroximeB" class="java.lang.String"/>
+	<field name="CephradineA" class="java.lang.String"/>
+	<field name="CephradineB" class="java.lang.String"/>
+	<field name="ChloramphenicolA" class="java.lang.String"/>
+	<field name="ChloramphenicolB" class="java.lang.String"/>
+	<field name="CloxacillinA" class="java.lang.String"/>
+	<field name="CloxacillinB" class="java.lang.String"/>
+	<field name="CiprofloxacinA" class="java.lang.String"/>
+	<field name="CiprofloxacinB" class="java.lang.String"/>
+	<field name="ColistinA" class="java.lang.String"/>
+	<field name="ColistinB" class="java.lang.String"/>
+	<field name="CoTrimoxazoleA" class="java.lang.String"/>
+	<field name="CoTrimoxazoleB" class="java.lang.String"/>
+	<field name="DoxkycyclineA" class="java.lang.String"/>
+	<field name="DoxkycyclineB" class="java.lang.String"/>
+	<field name="ErythromycinA" class="java.lang.String"/>
+	<field name="ErythromycinB" class="java.lang.String"/>
+	<field name="GentamicinA" class="java.lang.String"/>
+	<field name="GentamicinB" class="java.lang.String"/>
+	<field name="ImipenemA" class="java.lang.String"/>
+	<field name="ImipenemB" class="java.lang.String"/>
+	<field name="LevofloxacinA" class="java.lang.String"/>
+	<field name="LevofloxacinB" class="java.lang.String"/>
+	<field name="LinezolidA" class="java.lang.String"/>
+	<field name="LinezolidB" class="java.lang.String"/>
+	<field name="MecillinamA" class="java.lang.String"/>
+	<field name="MecillinamB" class="java.lang.String"/>
+	<field name="MeropenemA" class="java.lang.String"/>
+	<field name="MeropenemB" class="java.lang.String"/>
+	<field name="NalidixicA" class="java.lang.String"/>
+	<field name="NalidixicB" class="java.lang.String"/>
+	<field name="NeomycinA" class="java.lang.String"/>
+	<field name="NeomycinB" class="java.lang.String"/>
+	<field name="NetilmicinA" class="java.lang.String"/>
+	<field name="NetilmicinB" class="java.lang.String"/>
+	<field name="NitrofurantoinA" class="java.lang.String"/>
+	<field name="NitrofurantoinB" class="java.lang.String"/>
+	<field name="PenicillinA" class="java.lang.String"/>
+	<field name="PenicillinB" class="java.lang.String"/>
+	<field name="PiperacililnA" class="java.lang.String"/>
+	<field name="PiperacililnB" class="java.lang.String"/>
+	<field name="TazobactumA" class="java.lang.String"/>
+	<field name="TazobactumB" class="java.lang.String"/>
+	<field name="PolymyxinA" class="java.lang.String"/>
+	<field name="PolymyxinB" class="java.lang.String"/>
+	<field name="TetracyclineA" class="java.lang.String"/>
+	<field name="TetracyclineB" class="java.lang.String"/>
+	<field name="VancomycinA" class="java.lang.String"/>
+	<field name="VancomycinB" class="java.lang.String"/>
+	<field name="OrganismA" class="java.lang.String"/>
+	<field name="OrganismB" class="java.lang.String"/>
+	<field name="username" class="java.lang.String"/>
+	<variable name="TestList" class="java.lang.String" resetType="Group" resetGroup="MainTestGp" calculation="Sum">
+		<variableExpression><![CDATA[$F{MainTestName}]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<group name="MainTestGp">
+		<groupExpression><![CDATA[$F{MainTestName}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="210" splitType="Stretch">
+			<rectangle>
+				<reportElement x="9" y="88" width="535" height="70"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="313" y="142" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporting Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="129" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Order Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="142" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="90" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Physician]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="90" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="129" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="8" y="166" width="120" height="14"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{LabNo}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="10" y="160" width="539" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Microbiology Report]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="9" y="185" width="535" height="22"/>
+				<graphicElement>
+					<pen lineColor="#333333"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="17" y="184" width="26" height="22"/>
+				<box leftPadding="0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tests]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="185" width="5" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="513" y="185" width="0" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="184" width="33" height="22"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sample]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="379" y="91" width="153" height="13"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Consultant}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="379" y="103" width="168" height="29"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Degree}.replace( '#', '\n' ).trim()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="379" y="129" width="100" height="14"/>
+				<textElement>
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OrderDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="379" y="141" width="100" height="14"/>
+				<textElement>
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ReportingDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="518" y="185" width="33" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Sample}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="43" y="185" width="347" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TestList}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="120" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="135" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Lab No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="118" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="88" y="120" width="139" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Gender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="78" y="105" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="88" y="91" width="223" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PatientName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="78" y="91" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="105" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="91" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Patient Name]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="88" y="135" width="139" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LabNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="88" y="105" width="139" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Age}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="78" y="135" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="389" splitType="Stretch">
+			<staticText>
+				<reportElement x="165" y="37" width="213" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Antibiogram Of Organism Isolated]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="0" width="114" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ORGANISM ISOLATED:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="1" width="12" height="15"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="15" width="12" height="15"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="77" width="110" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ANTIBIOTIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="63" width="49" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[PATTERN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="77" width="110" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ANTIBIOTIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="63" width="48" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[PATTERN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="77" width="110" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ANTIBIOTIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="63" width="49" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[PATTERN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="93" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Amikacin01]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="110" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Amoxycillin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="127" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Amoxycalve]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="144" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Azithromycin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="160" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Aztreonam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="176" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cefaclor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="192" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cefepime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="208" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cefixime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="225" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cefotaxime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="241" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cefoxitin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="257" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ceftazidime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="273" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ceftriaxone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="289" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cefuroxime]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="93" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AmikacinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="93" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AmikacinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="110" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AmoxycillinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="110" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AmoxycillinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="127" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AmoxyClaveA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="127" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AmoxyClaveB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="144" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AzithromkyciA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="144" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AzithromkyciB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="160" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AztreonamB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="160" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AztreonamA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="176" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefaclorB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="176" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefaclorA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="192" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefeprimeB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="192" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefeprimeA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="208" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefiximeA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="208" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefiximeB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="225" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefotazimeB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="225" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefotazimeA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="241" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefoxitinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="241" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefoxitinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="257" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CeftaidimeB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="257" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CeftaidimeA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="273" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CeftraixoneA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="273" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CeftraixoneB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="159" y="289" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefuroximeB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="133" y="289" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CefuroximeA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="195" y="93" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cephradine]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="93" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CephradineA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="93" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CephradineB}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="195" y="110" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Chloramphenicol]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="127" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cloxacillin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="144" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ciprofloxacin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="160" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Colistin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="176" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Co-trimoxazole]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="192" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Doxycycline]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="208" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Erythromycin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="225" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Gentamicin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="241" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Imipenem]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="257" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Levofloxacin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="273" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Linezolid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="289" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Mecillinam]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="110" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ChloramphenicolA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="110" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ChloramphenicolB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="127" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CloxacillinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="127" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CloxacillinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="144" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CiprofloxacinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="144" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CiprofloxacinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="160" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ColistinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="160" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ColistinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="176" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CoTrimoxazoleA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="176" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CoTrimoxazoleB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="192" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DoxkycyclineB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="192" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DoxkycyclineA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="208" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ErythromycinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="208" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ErythromycinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="225" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{GentamicinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="225" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{GentamicinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="241" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ImipenemA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="241" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ImipenemB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="257" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LevofloxacinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="257" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LevofloxacinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="273" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LinezolidB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="273" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LinezolidA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="307" y="289" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MecillinamA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="289" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MecillinamB}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="133" y="77" width="22" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="77" width="23" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="93" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Meropenem]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="93" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MeropenemA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="516" y="94" width="22" height="12"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MeropenemB}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="370" y="110" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nalidixic Acid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="127" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Neomycin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="144" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Netilmicin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="160" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nitrofurantoin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="176" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Penicillin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="192" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Piperacillin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="208" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Piperacillin/Tazobactum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="225" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Polymyxin B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="241" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tetracycline]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="257" width="110" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Vancomycin]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="110" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NalidixicA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="516" y="110" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NalidixicB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="516" y="127" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NeomycinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="127" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NeomycinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="516" y="144" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NetilmicinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="144" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NetilmicinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="516" y="160" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NitrofurantoinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="160" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NitrofurantoinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="516" y="176" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PenicillinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="176" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PenicillinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="192" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PiperacililnA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="516" y="192" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PiperacililnB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="208" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TazobactumA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="516" y="208" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TazobactumB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="516" y="225" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PolymyxinB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="225" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PolymyxinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="515" y="241" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TetracyclineB}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="480" y="241" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TetracyclineA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="480" y="257" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{VancomycinA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="515" y="257" width="22" height="13"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{VancomycinB}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="307" y="79" width="20" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="79" width="23" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="77" width="23" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="481" y="77" width="22" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[A]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="167" y="4" width="330" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OrganismA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="167" y="17" width="330" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OrganismB}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="10" y="108" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="124" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="142" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="158" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="173" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="189" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="205" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="222" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="238" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="254" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="270" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="286" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="302" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="9" y="63" width="535" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="10" y="93" width="534" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="126" y="93" width="1" height="210"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="184" y="93" width="2" height="209"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="126" y="77" width="59" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="154" y="93" width="1" height="210"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="303" y="94" width="1" height="209"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="352" y="92" width="1" height="212"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="327" y="94" width="1" height="209"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="304" y="77" width="48" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="474" y="94" width="1" height="210"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="544" y="93" width="1" height="210"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="508" y="94" width="1" height="210"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="475" y="77" width="69" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="9" y="94" width="1" height="209"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="544" y="63" width="1" height="31"/>
+			</line>
+			<line>
+				<reportElement x="9" y="64" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement x="126" y="63" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement x="154" y="77" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="184" y="63" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement x="303" y="64" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement x="327" y="78" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="352" y="63" width="1" height="30"/>
+			</line>
+			<line>
+				<reportElement x="474" y="63" width="1" height="31"/>
+			</line>
+			<line>
+				<reportElement x="508" y="78" width="1" height="15"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="487" y="1" width="67" height="14"/>
+				<textElement textAlignment="Center">
+					<font isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="439" y="1" width="50" height="13"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Printed By]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="15" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Results relate to the sample only.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="25" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Kindly correlate clinically.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="4" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Notes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="36" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[S-Sensitive,I-Intermediate Sensitive,R-Resistant]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

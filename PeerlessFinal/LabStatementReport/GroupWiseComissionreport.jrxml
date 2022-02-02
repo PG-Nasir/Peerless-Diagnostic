@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="565" leftMargin="10" rightMargin="20" topMargin="20" bottomMargin="20" uuid="04a97901-84d0-4576-ad3b-a4f54b69856e">
+	<property name="ireport.zoom" value="2.1961500000000145"/>
+	<property name="ireport.x" value="520"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA["select * from TbFinalRefferWiseComissionStatement('2017-02-04','2018-02-04','DC-535')"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{sql}]]>
+	</queryString>
+	<field name="RefferName" class="java.lang.String"/>
+	<field name="RefferDegree" class="java.lang.String"/>
+	<field name="LabBill" class="java.lang.String"/>
+	<field name="PatientName" class="java.lang.String"/>
+	<field name="PathologyRate" class="java.math.BigDecimal"/>
+	<field name="PathologyCMDDiscount" class="java.math.BigDecimal"/>
+	<field name="PathologySellDiscount" class="java.math.BigDecimal"/>
+	<field name="PathologyNetDiscount" class="java.math.BigDecimal"/>
+	<field name="PathologyNetAmount" class="java.math.BigDecimal"/>
+	<field name="HormoneRate" class="java.math.BigDecimal"/>
+	<field name="HormoneCMDDiscount" class="java.math.BigDecimal"/>
+	<field name="HormoneSellDiscount" class="java.math.BigDecimal"/>
+	<field name="HormoneNetDiscount" class="java.math.BigDecimal"/>
+	<field name="HormoneNetAmount" class="java.math.BigDecimal"/>
+	<field name="EchoCardRate" class="java.math.BigDecimal"/>
+	<field name="EchoCardCMDDiscount" class="java.math.BigDecimal"/>
+	<field name="EchoCardSellDiscount" class="java.math.BigDecimal"/>
+	<field name="EchoCardNetDiscount" class="java.math.BigDecimal"/>
+	<field name="EchoCardNetAmount" class="java.math.BigDecimal"/>
+	<field name="UltraSonoRate" class="java.math.BigDecimal"/>
+	<field name="UltraSonoCMDDiscount" class="java.math.BigDecimal"/>
+	<field name="UltraSonoSellDiscount" class="java.math.BigDecimal"/>
+	<field name="UltraSonoNetDiscount" class="java.math.BigDecimal"/>
+	<field name="UltraSonoNetAmount" class="java.math.BigDecimal"/>
+	<field name="EnDosRate" class="java.math.BigDecimal"/>
+	<field name="EnDosCMDDiscount" class="java.math.BigDecimal"/>
+	<field name="EnDosSellDiscount" class="java.math.BigDecimal"/>
+	<field name="EnDosNetDiscount" class="java.math.BigDecimal"/>
+	<field name="EnDosNetAmount" class="java.math.BigDecimal"/>
+	<field name="XrayRate" class="java.math.BigDecimal"/>
+	<field name="XrayCMDDiscount" class="java.math.BigDecimal"/>
+	<field name="XraySellDiscount" class="java.math.BigDecimal"/>
+	<field name="XrayNetDiscount" class="java.math.BigDecimal"/>
+	<field name="XrayNetAmount" class="java.math.BigDecimal"/>
+	<field name="ECGRate" class="java.math.BigDecimal"/>
+	<field name="ECGCMDDiscount" class="java.math.BigDecimal"/>
+	<field name="ECGSellDiscount" class="java.math.BigDecimal"/>
+	<field name="ECGNetDiscount" class="java.math.BigDecimal"/>
+	<field name="ECGNetAmount" class="java.math.BigDecimal"/>
+	<field name="FNARate" class="java.math.BigDecimal"/>
+	<field name="FNACMDDiscount" class="java.math.BigDecimal"/>
+	<field name="FNASellDiscount" class="java.math.BigDecimal"/>
+	<field name="FNANetDiscount" class="java.math.BigDecimal"/>
+	<field name="FNANetAmount" class="java.math.BigDecimal"/>
+	<field name="OthersRate" class="java.math.BigDecimal"/>
+	<field name="OthersCMDDiscount" class="java.math.BigDecimal"/>
+	<field name="OthersSellDiscount" class="java.math.BigDecimal"/>
+	<field name="OthersNetDiscount" class="java.math.BigDecimal"/>
+	<field name="OthersNetAmount" class="java.math.BigDecimal"/>
+	<field name="ManualDiscount" class="java.math.BigDecimal"/>
+	<field name="DoctorDiscount" class="java.math.BigDecimal"/>
+	<field name="TotalCharge" class="java.math.BigDecimal"/>
+	<field name="TotalPaid" class="java.math.BigDecimal"/>
+	<field name="Due" class="java.math.BigDecimal"/>
+	<field name="Date" class="java.lang.String"/>
+	<field name="StartDate" class="java.util.Date"/>
+	<field name="EndDate" class="java.util.Date"/>
+	<variable name="BillTotal" class="java.lang.Double">
+		<variableExpression><![CDATA[($F{PathologyNetAmount}+$F{HormoneNetAmount}+$F{EchoCardNetAmount}+$F{UltraSonoNetAmount}+$F{EnDosNetAmount}+$F{XrayNetAmount}+$F{ECGNetAmount}+$F{FNANetAmount}+$F{OthersNetAmount})-$F{DoctorDiscount}]]></variableExpression>
+	</variable>
+	<variable name="TPath" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{PathologyRate}]]></variableExpression>
+	</variable>
+	<variable name="THormone" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{HormoneRate}]]></variableExpression>
+	</variable>
+	<variable name="TEcho" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{EchoCardRate}]]></variableExpression>
+	</variable>
+	<variable name="TUltra" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{UltraSonoRate}]]></variableExpression>
+	</variable>
+	<variable name="TEndos" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{EnDosRate}]]></variableExpression>
+	</variable>
+	<variable name="TXray" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XrayRate}]]></variableExpression>
+	</variable>
+	<variable name="TECG" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{ECGRate}]]></variableExpression>
+	</variable>
+	<variable name="TFna" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{FNARate}]]></variableExpression>
+	</variable>
+	<variable name="variable1" class="java.lang.String"/>
+	<variable name="TOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{OthersRate}]]></variableExpression>
+	</variable>
+	<variable name="TCharge" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{TotalCharge}]]></variableExpression>
+	</variable>
+	<variable name="TDiscount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{DoctorDiscount}]]></variableExpression>
+	</variable>
+	<variable name="TPaid" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{TotalPaid}]]></variableExpression>
+	</variable>
+	<variable name="TDue" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Due}]]></variableExpression>
+	</variable>
+	<variable name="TCommison" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[($F{PathologyNetAmount}+$F{HormoneNetAmount}+$F{EchoCardNetAmount}+$F{UltraSonoNetAmount}+$F{EnDosNetAmount}+$F{XrayNetAmount}+$F{ECGNetAmount}+$F{FNANetAmount}+$F{OthersNetAmount})-$F{DoctorDiscount}]]></variableExpression>
+	</variable>
+	<variable name="TCPath" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{PathologyNetAmount}]]></variableExpression>
+	</variable>
+	<variable name="TCHormone" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{HormoneNetAmount}]]></variableExpression>
+	</variable>
+	<variable name="TCEcho" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{EchoCardNetAmount}]]></variableExpression>
+	</variable>
+	<variable name="TCUltra" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{UltraSonoNetAmount}]]></variableExpression>
+	</variable>
+	<variable name="TCEndos" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{EnDosNetAmount}]]></variableExpression>
+	</variable>
+	<variable name="TCXray" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{XrayNetAmount}]]></variableExpression>
+	</variable>
+	<variable name="TCECG" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{ECGNetAmount}]]></variableExpression>
+	</variable>
+	<variable name="TCFna" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{FNANetAmount}]]></variableExpression>
+	</variable>
+	<variable name="TCOther" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{OthersNetAmount}]]></variableExpression>
+	</variable>
+	<variable name="TdocDis" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{DoctorDiscount}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="184" y="0" width="131" height="12" forecolor="#333333" backcolor="#FFFFFF" uuid="1968f497-692b-498f-828c-87b263b94a1b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID PERFORMANCE REPORT]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yy">
+				<reportElement x="302" y="0" width="51" height="14" uuid="bd25cd24-427e-4cdd-8cdc-91c041dc0757"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{StartDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="339" y="-1" width="13" height="14" uuid="2d21d8c0-7bd7-40c3-b485-0847eb347ddf"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yy">
+				<reportElement x="344" y="0" width="69" height="14" uuid="172d7934-c3bc-4144-8d74-be71e031a6cf"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EndDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="17" width="86" height="14" uuid="11d9934d-423d-4d44-aae8-c35ddc1f3681"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Referal Name:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="75" y="17" width="726" height="14" uuid="0ccaa564-bbfc-4c2c-8091-09fdbef3abe8">
+					<printWhenExpression><![CDATA[$F{RefferName}+" ("+$F{RefferDegree}+")"]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RefferName}+" ("+$F{RefferDegree}+")"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="17" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="565" height="1" uuid="4d05d12d-c101-4bcf-bde6-b82389d87a8b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="16" width="565" height="1" uuid="18188e88-8e70-4e5a-b2f4-02730ce87e31"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="15" uuid="00faf51c-cdbb-4dd7-82cd-ca1209fd3de9"/>
+			</line>
+			<line>
+				<reportElement x="46" y="1" width="1" height="15" uuid="93aeaeee-fc8d-4227-9cff-ab60ada856b3"/>
+			</line>
+			<line>
+				<reportElement x="161" y="1" width="1" height="15" uuid="6847c05a-dfb4-4d93-90b2-69b7b74bb39e"/>
+			</line>
+			<line>
+				<reportElement x="189" y="1" width="1" height="15" uuid="c73d3380-4c0c-4e2a-8282-cf26ad0d986a"/>
+			</line>
+			<line>
+				<reportElement x="413" y="0" width="1" height="16" uuid="ffae227d-110f-4f96-9b07-671faea01283"/>
+			</line>
+			<staticText>
+				<reportElement x="162" y="1" width="27" height="14" uuid="084f7012-6228-4934-b537-c78103b27cb5"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PATH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="1" width="45" height="14" uuid="1a6bc1dd-11ed-4843-84cf-d7d2ca693ce8"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BILL NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="534" y="1" width="30" height="15" uuid="5614f224-aea4-41aa-859a-4b8fddca358c"/>
+				<box rightPadding="4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROFIT]]></text>
+			</staticText>
+			<line>
+				<reportElement x="564" y="1" width="1" height="15" uuid="d81a461e-3c57-4663-b2b1-52b05e68de5c"/>
+			</line>
+			<line>
+				<reportElement x="217" y="1" width="1" height="15" uuid="578f01f7-3e55-4cac-85df-907e2663eacb"/>
+			</line>
+			<line>
+				<reportElement x="357" y="1" width="1" height="15" uuid="83c68d40-de0e-4429-861d-deb73140ba92"/>
+			</line>
+			<staticText>
+				<reportElement x="447" y="1" width="28" height="14" uuid="1d489499-6661-4882-813c-8a38860bc559"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[T.DIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="1" width="28" height="14" uuid="9773c954-657e-40a5-a240-f25f2fc02e0f"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECV.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="1" width="28" height="14" uuid="3a04016c-00a4-405f-b420-f4750be7502d"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DUE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="1" width="27" height="14" uuid="3496ff49-0544-490b-ab31-eed2e98cba2b"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="1" width="27" height="14" uuid="6901e401-359c-4b8d-8fef-d3aa229d7f13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ECHQ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="245" y="0" width="1" height="16" uuid="4be21b6e-be4a-4857-bf70-efd7c3b3ed84"/>
+			</line>
+			<staticText>
+				<reportElement x="246" y="1" width="27" height="14" uuid="c2e42c83-41d3-4507-b051-8e7a00edfc72"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ULTRAS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="273" y="1" width="1" height="15" uuid="916c6463-a866-40f1-b3ab-1a1e9da00aad"/>
+			</line>
+			<line>
+				<reportElement x="301" y="0" width="1" height="16" uuid="8c06afe5-eee7-40c1-92d2-c4f5d18ae9d6"/>
+			</line>
+			<staticText>
+				<reportElement x="274" y="1" width="27" height="14" uuid="cbed2d0d-53f0-4883-8fc7-dfcf060a5502"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENDOSC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="1" width="27" height="14" uuid="8d1ac1e4-6695-4392-a3be-2198b17d09d1"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[X-RAY]]></text>
+			</staticText>
+			<line>
+				<reportElement x="329" y="1" width="1" height="15" uuid="366baadd-40a3-422e-ad4b-6fbbf5fa7784"/>
+			</line>
+			<staticText>
+				<reportElement x="330" y="1" width="27" height="14" uuid="7fb338ca-b5b6-4a09-a364-f7d5413fba70"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ECG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="1" width="27" height="14" uuid="9ab56d6d-188d-4119-8dcb-bd127610dfe8"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FNA/HS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="385" y="1" width="1" height="15" uuid="7045dbf6-8b97-4ee7-bd93-ded5d8575a36"/>
+			</line>
+			<staticText>
+				<reportElement x="386" y="1" width="27" height="14" uuid="2bf67864-6807-45dd-8872-f49f5a69c88a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OTHER]]></text>
+			</staticText>
+			<line>
+				<reportElement x="475" y="0" width="1" height="16" uuid="5e7a5c93-cf11-4409-9e59-8b635dcea167"/>
+			</line>
+			<line>
+				<reportElement x="504" y="1" width="1" height="15" uuid="3939e8ae-a020-447c-918e-6f8905aaf5c1"/>
+			</line>
+			<line>
+				<reportElement x="533" y="1" width="1" height="15" uuid="efaee2d6-3fd1-4ba4-b5a8-fbca45cca474"/>
+			</line>
+			<line>
+				<reportElement x="446" y="1" width="1" height="15" uuid="e74a140d-adfb-4ee2-b9ff-237de69a1abd"/>
+			</line>
+			<staticText>
+				<reportElement x="414" y="1" width="32" height="14" uuid="42113766-6d5a-4125-9c4d-c87e923420a8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[T.CHAR.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="1" width="114" height="14" uuid="526bec03-4b08-4c95-a85f-d41957da90bf"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PATIENT NAME]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="-1" width="563" height="1" uuid="ad22f985-5485-46c8-9eaf-89ccfbe9e05c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="15" width="565" height="1" uuid="667bb0ae-609e-419e-81bd-ca23017714b8"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="15" uuid="4534161e-e9b6-4fd3-bd50-2b090322cdb7"/>
+			</line>
+			<line>
+				<reportElement x="46" y="-1" width="1" height="17" uuid="99d3857a-a170-4045-bb9f-7a73a8075327"/>
+			</line>
+			<line>
+				<reportElement x="161" y="-1" width="1" height="17" uuid="ea7ad8bf-79fc-48e8-93fe-f5603860e259"/>
+			</line>
+			<line>
+				<reportElement x="189" y="-1" width="1" height="17" uuid="7aaabb5f-dcc0-4870-859d-7bd13b271c91"/>
+			</line>
+			<textField>
+				<reportElement x="1" y="0" width="45" height="15" uuid="801706b5-38a3-43fd-8efc-2fd6490d589b"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LabBill}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="0" width="114" height="15" uuid="7a62ec27-7e66-48eb-acc6-f60c433cec62"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PatientName}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="413" y="-2" width="1" height="17" uuid="040408b3-7401-4fc1-bde4-f2b675427e3c"/>
+			</line>
+			<line>
+				<reportElement x="564" y="-1" width="1" height="17" uuid="6c028dbd-4911-410d-af2b-356abc72b2b9"/>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="534" y="0" width="30" height="15" uuid="1d312b08-4167-4a5a-8cb2-ccd4b5d7a117">
+					<printWhenExpression><![CDATA[$V{BillTotal}.doubleValue() == 0.0 ? null :$V{BillTotal}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{BillTotal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="217" y="-1" width="1" height="17" uuid="fe83f5bf-f152-427a-af36-c87dfdd49dff"/>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="447" y="0" width="28" height="15" uuid="8396e5de-7e46-4a3d-8bf2-26f5d17d6708">
+					<printWhenExpression><![CDATA[$F{DoctorDiscount}.doubleValue() == 0.0 ? null : $F{DoctorDiscount}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DoctorDiscount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="476" y="0" width="28" height="15" uuid="e8491dcb-83fc-4868-9168-ed07f2983e65"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TotalPaid}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="505" y="0" width="28" height="15" uuid="e4b7fadc-fc38-43da-8304-6549e654f4b3">
+					<printWhenExpression><![CDATA[$F{Due}.doubleValue() == 0.0 ? null :$F{Due}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Due}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="190" y="0" width="27" height="15" uuid="ac7c74ee-0f02-4de9-830b-e7c37b7cd321">
+					<printWhenExpression><![CDATA[$F{HormoneRate}.doubleValue() == 0.0 ? null : $F{HormoneRate}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HormoneRate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="218" y="0" width="27" height="15" uuid="325dbd9e-0d76-419a-b187-ccf2b4c4ce38">
+					<printWhenExpression><![CDATA[$F{EchoCardRate}.doubleValue() == 0.0 ? null : $F{EchoCardRate}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EchoCardRate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="245" y="-1" width="1" height="17" uuid="3cb4dea0-a9e6-45b0-8801-b3bff8f17dcc"/>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="246" y="0" width="27" height="15" uuid="b7bd7568-9610-4410-94b7-80387b4e5fe8">
+					<printWhenExpression><![CDATA[$F{UltraSonoRate}.doubleValue() == 0.0 ? null : $F{UltraSonoRate}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{UltraSonoRate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="273" y="-1" width="1" height="17" uuid="a2fcdd5c-9fef-437a-a484-4b25f74429ad"/>
+			</line>
+			<line>
+				<reportElement x="301" y="-2" width="1" height="17" uuid="0be228f0-2ff2-4312-83e5-5776c3ae5b75"/>
+			</line>
+			<line>
+				<reportElement x="329" y="-2" width="1" height="17" uuid="43348fe4-297e-48f3-8f8a-d680132faa74"/>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="302" y="0" width="27" height="15" uuid="a9b080d9-8084-4777-badd-72750e60063c">
+					<printWhenExpression><![CDATA[$F{XrayRate}.doubleValue() == 0.0 ? null : $F{XrayRate}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{XrayRate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="330" y="0" width="27" height="15" uuid="2e31b815-07aa-4f0f-baaf-fc09e8a88106">
+					<printWhenExpression><![CDATA[$F{ECGRate}.doubleValue() == 0.0 ? null : $F{ECGRate}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ECGRate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="357" y="-1" width="1" height="17" uuid="31ed63ec-9c28-4337-8ac7-952e65ff09b7"/>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="358" y="0" width="27" height="15" uuid="dd7cc37b-3eb0-4660-a5aa-e7d0092f137b">
+					<printWhenExpression><![CDATA[$F{FNARate}.doubleValue() == 0.0 ? null : $F{FNARate}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FNARate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="385" y="-1" width="1" height="17" uuid="ad1b7908-44fc-4e5e-bd89-8e4a236b99bf"/>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="386" y="0" width="27" height="15" uuid="fc1a8a57-5a5d-4e58-af6e-21ce34ae8b7d">
+					<printWhenExpression><![CDATA[$F{OthersRate}.doubleValue() == 0.0 ? null : $F{OthersRate}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OthersRate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="475" y="-1" width="1" height="17" uuid="a0c95c49-a95d-484e-95a6-ec8cb545823e"/>
+			</line>
+			<line>
+				<reportElement x="504" y="-1" width="1" height="17" uuid="110511ec-1fc1-4704-a611-f6f022135102"/>
+			</line>
+			<line>
+				<reportElement x="533" y="-1" width="1" height="17" uuid="f5caeedf-ce72-43e7-b244-127bca988a68"/>
+			</line>
+			<line>
+				<reportElement x="446" y="-1" width="1" height="17" uuid="1e0f4f58-7fe2-406f-b232-2a4d2a4f473f"/>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="414" y="0" width="32" height="15" uuid="dfba999f-7215-48e9-a328-51c52e6e9a17">
+					<printWhenExpression><![CDATA[$F{TotalCharge}.doubleValue() == 0.0 ? null : $F{TotalCharge}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TotalCharge}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="162" y="0" width="27" height="15" uuid="93679ac3-f1b2-4dfc-b7cc-67d819e32dcd">
+					<printWhenExpression><![CDATA[$F{PathologyRate}.doubleValue() == 0.0 ? null : $F{PathologyRate}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PathologyRate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="274" y="0" width="27" height="15" uuid="166c6cdd-3c17-4f8b-995e-b7b7af6fdbab">
+					<printWhenExpression><![CDATA[$F{EnDosRate}.doubleValue() == 0.0 ? null : $F{EnDosRate}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EnDosRate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="37" width="160" height="20" uuid="53d44ed7-f808-4f4f-9e04-3dda426fe9d6"/>
+				<textElement>
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROFIT PAYABLE (TAKA)------>]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="6" width="565" height="1" uuid="649b17ec-a690-4e69-a4cf-81fd65c0435a"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="162" y="39" width="27" height="14" uuid="57f180a7-0c88-4f58-9ed3-942d4fd1cdaf"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCPath}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="190" y="39" width="27" height="14" uuid="f214512e-6baa-4fed-90ec-b6ac724451ec"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCHormone}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="218" y="39" width="27" height="14" uuid="465d3e26-d0ed-416d-b5d7-54a19b742ab2"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCEcho}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="246" y="39" width="27" height="14" uuid="ef565df3-f8b3-4bd2-8b3f-8eb63bc2a75a"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCUltra}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="274" y="39" width="27" height="14" uuid="c0efeeac-ae25-4647-897d-57a4c062a323"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCEndos}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="302" y="39" width="27" height="14" uuid="0c13d241-3190-429d-acf4-94492b6540a8"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCXray}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="330" y="39" width="27" height="14" uuid="010b511c-c63a-4cac-b666-c2412b93fb3d"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCECG}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="358" y="39" width="30" height="14" uuid="6a19c0f0-3210-48ea-8920-7177e501d23c"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCFna}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="386" y="39" width="30" height="14" uuid="e5438297-a39e-4e84-8976-080f154fb356"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCOther}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="414" y="39" width="32" height="14" uuid="0f3baf88-f9f0-43b2-aaa0-53cea70bef7f"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCharge}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="447" y="39" width="30" height="14" uuid="de415b8a-79c7-4941-b65e-9a92d58cc90a"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TDiscount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="476" y="39" width="30" height="14" uuid="b073e6e8-4fdc-4643-92c3-b50420900187"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TPaid}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="505" y="39" width="30" height="14" uuid="7268270b-ce19-43e9-b5ae-ec966aa3cb75"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TDue}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="533" y="39" width="32" height="14" uuid="08a818af-365b-4fcb-ab7d-0372abee501c"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCommison}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="31" width="565" height="1" uuid="b8276714-a0ec-49b1-839b-b85eb94589f0"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<textField pattern="#,##0.00">
+				<reportElement x="386" y="12" width="27" height="14" uuid="328b1d19-a4f8-4a0e-8e2c-1f9dfff403ca"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TOther}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="476" y="12" width="28" height="14" uuid="7161dfb4-b88e-421b-a9c6-78d591e17561"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TPaid}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="218" y="12" width="27" height="14" uuid="1c7ea375-e59c-4d62-a83c-34e92f8d79bd"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TEcho}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="358" y="12" width="27" height="14" uuid="89b5ba91-b838-4e8d-90a4-298d7721b7ea"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TFna}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="274" y="12" width="27" height="14" uuid="e9a9a951-7d34-452d-b010-8a2fd3d16be2"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TEndos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="10" width="162" height="20" uuid="7b92d20a-6374-4d2b-8294-f5565944e714"/>
+				<textElement>
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL AMOUNT (TAKA)------>]]></text>
+			</staticText>
+			<textField pattern="#,##0.00">
+				<reportElement x="190" y="12" width="27" height="14" uuid="384b44d7-cefa-4b97-b9bd-86bc720137e2"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{THormone}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="447" y="12" width="28" height="14" uuid="9153d6ed-d01b-4877-aab5-63cfccad8b48"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TDiscount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="330" y="12" width="27" height="14" uuid="33f498c6-5536-47c7-ba86-35b5d004c5f3"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TECG}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="246" y="12" width="27" height="14" uuid="283d9630-f616-4f5b-b5cb-2a6dc16e71f5"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TUltra}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="162" y="12" width="27" height="14" uuid="1aac7278-356e-4852-9214-0ee22b9d5e9e"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TPath}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="505" y="12" width="28" height="14" uuid="03605700-31b2-4ea8-995f-049644fc7d23"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TDue}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="414" y="12" width="32" height="14" uuid="36c144b7-abba-4859-a2ab-ff64a081d770"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TCharge}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="302" y="12" width="27" height="14" uuid="8a2909e9-39ed-4fb7-ae88-67880b80af02"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TXray}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

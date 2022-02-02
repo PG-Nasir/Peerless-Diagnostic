@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA["select (select headTitle from tbStoreItemCatagory where headId=a.catagoryId) as categoryName,a.productName,a.unit,a.qty,a.sellPrice,a.totalPrice,b.amount,b.invoiceNo,b.BillNo,b.PersionName,b.entryTime,'2017-03-27' as firstDate,'2017-04-27' as endDate,(select username from tblogin where user_id=b.createBy) as username from TbStoreTransectionInvoice b join TbStoreTransectionDetails a on b.invoiceNo=a.invoiceNo where a.type=3 and b.type=3 and b.date between '2017-03-27' and '2017-04-27' order by b.invoiceNo asc"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{sql}]]>
+	</queryString>
+	<field name="categoryName" class="java.lang.String"/>
+	<field name="productName" class="java.lang.String"/>
+	<field name="unit" class="java.lang.String"/>
+	<field name="qty" class="java.math.BigDecimal"/>
+	<field name="sellPrice" class="java.math.BigDecimal"/>
+	<field name="totalPrice" class="java.math.BigDecimal"/>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<field name="invoiceNo" class="java.lang.Integer"/>
+	<field name="BillNo" class="java.lang.String"/>
+	<field name="PersionName" class="java.lang.String"/>
+	<field name="entryTime" class="java.sql.Timestamp"/>
+	<field name="firstDate" class="java.lang.String"/>
+	<field name="endDate" class="java.lang.String"/>
+	<field name="username" class="java.lang.String"/>
+	<variable name="tAmount" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{totalPrice}]]></variableExpression>
+	</variable>
+	<group name="Invoice">
+		<groupExpression><![CDATA[$F{invoiceNo}]]></groupExpression>
+		<groupHeader>
+			<band height="44">
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Opaque" x="11" y="30" width="240" height="14" forecolor="#FFFFFF" backcolor="#666666"/>
+					<textElement>
+						<font fontName="Tahoma"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Name Of Department : "+($F{PersionName}==null?"":$F{PersionName})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Opaque" x="11" y="14" width="134" height="14" forecolor="#FFFFFF" backcolor="#666666"/>
+					<textElement>
+						<font fontName="Tahoma"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Invoice No:"+$F{invoiceNo}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="28">
+				<textField>
+					<reportElement x="11" y="0" width="250" height="14"/>
+					<box leftPadding="2"/>
+					<textElement>
+						<font fontName="Tahoma"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Issue Time : "+$F{entryTime}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="12" y="14" width="249" height="14"/>
+					<textElement>
+						<font fontName="Tahoma"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Issue Post : "+$F{username}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="78" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="55" width="246" height="20"/>
+				<textElement>
+					<font fontName="Tahoma" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Statement of issue to department : For]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="337" y="56" width="100" height="20"/>
+				<textElement>
+					<font fontName="Tahoma" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{endDate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="256" y="56" width="75" height="20"/>
+				<textElement>
+					<font fontName="Tahoma" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{firstDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="329" y="56" width="10" height="20"/>
+				<textElement>
+					<font fontName="Tahoma" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="4" width="555" height="19"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IDEAL LAB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="33" width="555" height="13"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Phone:031620264,Mobile:01823-986447]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="20" width="554" height="13"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[654,O.R,Nilzam Road,G.E.C Circle,Chittagong]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="17" splitType="Stretch">
+			<line>
+				<reportElement x="10" y="0" width="534" height="1"/>
+			</line>
+			<line>
+				<reportElement x="10" y="16" width="534" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="2" width="253" height="14"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="2" width="55" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="2" width="55" height="14"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
+				<text><![CDATA[Unit]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<line>
+				<reportElement x="10" y="-1" width="534" height="1"/>
+			</line>
+			<line>
+				<reportElement x="10" y="16" width="534" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="10" y="1" width="253" height="14"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font fontName="Tahoma"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="456" y="1" width="59" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="1" width="55" height="14"/>
+				<box leftPadding="2"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{unit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="0" width="533" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Developed By-www.cursorbd.com]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="3" width="100" height="14"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="1" width="532" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

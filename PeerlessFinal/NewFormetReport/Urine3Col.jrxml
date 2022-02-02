@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="560" leftMargin="15" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0263162364614142"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="210"/>
+	<field name="LabNo" class="java.lang.String"/>
+	<field name="PatientName" class="java.lang.String"/>
+	<field name="Age" class="java.lang.String"/>
+	<field name="Gender" class="java.lang.String"/>
+	<field name="OrderDate" class="java.lang.String"/>
+	<field name="ReportingDate" class="java.lang.String"/>
+	<field name="MainTestName" class="java.lang.String"/>
+	<field name="Sample" class="java.lang.String"/>
+	<field name="Consultant" class="java.lang.String"/>
+	<field name="Degree" class="java.lang.String"/>
+	<field name="TestName" class="java.lang.String"/>
+	<field name="Result" class="java.lang.String"/>
+	<field name="NormalRange" class="java.lang.String"/>
+	<field name="TestList" class="java.lang.String"/>
+	<field name="Flag" class="java.lang.String"/>
+	<field name="LabIncharge" class="java.lang.String"/>
+	<field name="CheckedBy" class="java.lang.String"/>
+	<field name="LabInchargeDegree" class="java.lang.String"/>
+	<field name="CheckedByDegree" class="java.lang.String"/>
+	<field name="DoctorName1" class="java.lang.String"/>
+	<field name="DoctorName1Degree" class="java.lang.String"/>
+	<field name="DoctorName2" class="java.lang.String"/>
+	<field name="DoctorName2Degree" class="java.lang.String"/>
+	<field name="QuantityV" class="java.lang.String"/>
+	<field name="ColourV" class="java.lang.String"/>
+	<field name="AppearanceV" class="java.lang.String"/>
+	<field name="SedimentV" class="java.lang.String"/>
+	<field name="SpGravityV" class="java.lang.String"/>
+	<field name="PusCellV" class="java.lang.String"/>
+	<field name="EpithelialCellsV" class="java.lang.String"/>
+	<field name="RBCV" class="java.lang.String"/>
+	<field name="CalOxalateV" class="java.lang.String"/>
+	<field name="AmPhosV" class="java.lang.String"/>
+	<field name="TripPhosV" class="java.lang.String"/>
+	<field name="SulCryV" class="java.lang.String"/>
+	<field name="BacteriaV" class="java.lang.String"/>
+	<field name="FungiV" class="java.lang.String"/>
+	<field name="CastsV" class="java.lang.String"/>
+	<field name="CalOxCryV" class="java.lang.String"/>
+	<field name="BilharziasisV" class="java.lang.String"/>
+	<field name="hPV" class="java.lang.String"/>
+	<field name="AlbuminV" class="java.lang.String"/>
+	<field name="GlucoseV" class="java.lang.String"/>
+	<field name="BileSaltV" class="java.lang.String"/>
+	<field name="BilePigmentV" class="java.lang.String"/>
+	<field name="AcetoneV" class="java.lang.String"/>
+	<field name="UrobiliogenV" class="java.lang.String"/>
+	<field name="BilirubinV" class="java.lang.String"/>
+	<field name="NitritesV" class="java.lang.String"/>
+	<field name="BeJoProV" class="java.lang.String"/>
+	<field name="HaemoglobinV" class="java.lang.String"/>
+	<field name="MucusV" class="java.lang.String"/>
+	<field name="SpermatozoaV" class="java.lang.String"/>
+	<field name="ParasitesV" class="java.lang.String"/>
+	<field name="MicroV" class="java.lang.String"/>
+	<field name="YeastV" class="java.lang.String"/>
+	<field name="BloodV" class="java.lang.String"/>
+	<field name="SugarV" class="java.lang.String"/>
+	<field name="UricAcidV" class="java.lang.String"/>
+	<field name="UrateV" class="java.lang.String"/>
+	<field name="ExPhosphateV" class="java.lang.String"/>
+	<field name="FattyV" class="java.lang.String"/>
+	<field name="GranularV" class="java.lang.String"/>
+	<field name="WBCV" class="java.lang.String"/>
+	<field name="HyalineV" class="java.lang.String"/>
+	<field name="RBCCastV" class="java.lang.String"/>
+	<field name="QuantityR" class="java.lang.String"/>
+	<field name="ColourR" class="java.lang.String"/>
+	<field name="AppearanceR" class="java.lang.String"/>
+	<field name="SedimentR" class="java.lang.String"/>
+	<field name="SpGravityR" class="java.lang.String"/>
+	<field name="hPR" class="java.lang.String"/>
+	<field name="SugarR" class="java.lang.String"/>
+	<field name="AlbuminR" class="java.lang.String"/>
+	<field name="AcetoneR" class="java.lang.String"/>
+	<field name="BloodR" class="java.lang.String"/>
+	<field name="BilirubinR" class="java.lang.String"/>
+	<field name="UrobiliogenR" class="java.lang.String"/>
+	<field name="NitritesR" class="java.lang.String"/>
+	<field name="BilePigmentR" class="java.lang.String"/>
+	<field name="BileSaltR" class="java.lang.String"/>
+	<field name="ExPhosphateR" class="java.lang.String"/>
+	<field name="RBCR" class="java.lang.String"/>
+	<field name="PusCellR" class="java.lang.String"/>
+	<field name="EpithelialCellsR" class="java.lang.String"/>
+	<field name="MucusR" class="java.lang.String"/>
+	<field name="SpermatozoaR" class="java.lang.String"/>
+	<field name="ParasitesR" class="java.lang.String"/>
+	<field name="MicroR" class="java.lang.String"/>
+	<field name="YeastR" class="java.lang.String"/>
+	<field name="CalOxalateR" class="java.lang.String"/>
+	<field name="UricAcidR" class="java.lang.String"/>
+	<field name="UrateR" class="java.lang.String"/>
+	<field name="TripPhosR" class="java.lang.String"/>
+	<field name="field1" class="java.lang.String"/>
+	<field name="AmPhosR" class="java.lang.String"/>
+	<field name="HyalineR" class="java.lang.String"/>
+	<field name="GranularR" class="java.lang.String"/>
+	<field name="FattyR" class="java.lang.String"/>
+	<field name="WBCR" class="java.lang.String"/>
+	<field name="RBCCastR" class="java.lang.String"/>
+	<field name="username" class="java.lang.String"/>
+	<variable name="TestList" class="java.lang.String" resetType="Group" resetGroup="MainTestGp" calculation="Sum">
+		<variableExpression><![CDATA[$F{MainTestName}]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<group name="MainTestGp">
+		<groupExpression><![CDATA[$F{MainTestName}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="210" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="88" width="544" height="70"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="312" y="142" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporting Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="129" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Order Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="142" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="90" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Physician]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="90" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="129" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="7" y="166" width="120" height="14"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{LabNo}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="9" y="160" width="545" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Urine Examination Report]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="11" y="185" width="543" height="22"/>
+				<graphicElement>
+					<pen lineColor="#333333"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="16" y="184" width="26" height="22"/>
+				<box leftPadding="0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tests]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="185" width="5" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="521" y="185" width="2" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="184" width="33" height="22"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sample]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="378" y="91" width="153" height="13"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Consultant}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="378" y="103" width="168" height="29"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Degree}.replace( '#', '\n' ).trim()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="378" y="129" width="100" height="14"/>
+				<textElement>
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OrderDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="378" y="141" width="100" height="14"/>
+				<textElement>
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ReportingDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="526" y="185" width="28" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Sample}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="42" y="185" width="347" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TestList}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="120" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="135" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Lab No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="118" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="87" y="120" width="139" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Gender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="77" y="105" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="87" y="91" width="223" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PatientName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="77" y="91" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="105" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="91" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Patient Name]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="87" y="135" width="139" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LabNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="87" y="105" width="139" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Age}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="77" y="135" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="401" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="-2" width="165" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[(1).Physical Examination]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="37" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{QuantityV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="52" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ColourV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="67" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AppearanceV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="82" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SedimentV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="205" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SpGravityV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="284" y="141" width="96" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Micro Organism]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="204" width="115" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Calcium Oxalate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="82" width="96" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Epithelial Cells]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="126" width="96" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Parasites]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="0" width="184" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[(3).Microscopic Examination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="111" width="96" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Spermatozoa (Dead)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="98" width="96" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mucus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="156" width="96" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Yeast]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="67" width="96" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pus Cells]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="52" width="96" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[R B C]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="67" width="65" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PusCellV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="82" width="69" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EpithelialCellsV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="52" width="65" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{RBCV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="204" width="66" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CalOxalateV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="98" width="65" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MucusV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="111" width="65" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SpermatozoaV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="126" width="65" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ParasitesV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="141" width="65" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MicroV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="156" width="65" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YeastV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="168" width="165" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[(2).Chemical Examination]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="220" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hPV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="249" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AlbuminV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="356" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BileSaltV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="341" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BilePigmentV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="263" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AcetoneV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="309" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UrobiliogenV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="295" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BilirubinV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="373" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ExPhosphateV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="235" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SugarV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="284" y="291" width="48" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Casts]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="340" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{FattyV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="325" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{GranularV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="357" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{WBCV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="284" y="325" width="110" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Granular Casts]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="340" width="110" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Fatty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="311" width="110" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Hyaline Cast]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="311" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{HyalineV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="284" y="357" width="110" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[WBC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="371" width="110" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RBC Cast]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="187" width="48" height="17"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Crystals]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="220" width="115" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Uric Acid]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="220" width="67" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UricAcidV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="284" y="235" width="115" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Urate]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="235" width="67" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UrateV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="371" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{RBCCastV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="19" width="119" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Test]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="19" width="56" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Result]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="19" width="80" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ref.Range]]></text>
+			</staticText>
+			<line>
+				<reportElement x="12" y="34" width="261" height="1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="38" width="115" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{QuantityV}!=null?"Quantity":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="12" y="51" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="12" y="65" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="12" y="81" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="13" y="96" width="260" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="52" width="115" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ColourV}!=null?"Colour":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="67" width="115" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AppearanceV}!=null?"Apperance":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="82" width="115" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SedimentV}!=null?"Sediment":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="205" width="112" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SpGravityV}!=null?"Sp.Gravity":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="16" y="218" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="139" y="188" width="87" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Result]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="188" width="122" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Test]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="188" width="80" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ref.Range]]></text>
+			</staticText>
+			<line>
+				<reportElement x="15" y="203" width="262" height="1"/>
+			</line>
+			<line>
+				<reportElement x="17" y="233" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="220" width="112" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hPV}!=null?"Reaction (pH)":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="17" y="248" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="235" width="112" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SugarV}!=null?"Sugar":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="16" y="263" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="250" width="112" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AlbuminV}!=null?"Albumin":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="16" y="278" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="265" width="116" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AcetoneV}!=null?"Acetone (Ketone Body)":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="17" y="293" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="280" width="116" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BloodV}!=null?"Blood":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="279" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BloodV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="295" width="116" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BilirubinV}!=null?"Bilirubin":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="17" y="308" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="17" y="324" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="311" width="116" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UrobiliogenV}!=null?"Urobilinogen":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="326" width="116" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NitritesV}!=null?"Nitrites":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="17" y="339" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="139" y="324" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NitritesV}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="17" y="355" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="342" width="117" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BilePigmentV}!=null?"Bile Pegment":""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="357" width="117" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BileSaltV}!=null?"Bile Salt":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="17" y="370" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="19" y="386" width="259" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="373" width="117" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ExPhosphateV}!=null?"Exs.Of Phosphate":""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="284" y="34" width="261" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="468" y="19" width="80" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ref.Range]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="19" width="119" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Test]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="19" width="50" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Result]]></text>
+			</staticText>
+			<line>
+				<reportElement x="284" y="65" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="81" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="97" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="111" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="125" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="140" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="155" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="284" y="263" width="115" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Amorphaus Phosphate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="249" width="115" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Triple Phosphate]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="263" width="67" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AmPhosV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="398" y="249" width="67" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TripPhosV}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="284" y="324" width="268" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="340" width="268" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="355" width="268" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="283" y="371" width="269" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="282" y="386" width="270" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="218" width="267" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="233" width="267" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="248" width="267" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="284" y="263" width="267" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="283" y="278" width="266" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="37" width="80" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{QuantityR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="52" width="80" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ColourR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="67" width="80" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AppearanceR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="82" width="80" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SedimentR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="205" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SpGravityR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="220" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hPR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="235" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SugarR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="249" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AlbuminR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="263" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AcetoneR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="279" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BloodR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="295" width="50" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BilirubinR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="309" width="78" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UrobiliogenR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="324" width="68" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NitritesR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="341" width="78" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BilePigmentR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="356" width="78" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BileSaltR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="195" y="373" width="78" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ExPhosphateR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="52" width="73" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{RBCR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="67" width="73" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PusCellR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="82" width="85" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EpithelialCellsR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="98" width="73" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MucusR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="111" width="73" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SpermatozoaR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="126" width="73" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ParasitesR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="141" width="73" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{MicroR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="156" width="73" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{YeastR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="204" width="77" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{CalOxalateR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="220" width="77" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UricAcidR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="235" width="77" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{UrateR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="249" width="77" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TripPhosR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="263" width="77" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{AmPhosR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="311" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{HyalineR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="325" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{GranularR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="340" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{FattyR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="357" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{WBCR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="468" y="371" width="70" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{RBCCastR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="284" y="36" width="48" height="17"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cells]]></text>
+			</staticText>
+			<line>
+				<reportElement x="284" y="50" width="261" height="1"/>
+			</line>
+			<line>
+				<reportElement x="284" y="203" width="267" height="1"/>
+			</line>
+			<line>
+				<reportElement x="284" y="308" width="267" height="1"/>
+			</line>
+			<line>
+				<reportElement x="284" y="170" width="261" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="486" y="-13" width="67" height="14"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="439" y="-13" width="50" height="13"/>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Printed By]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="15" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Results relate to the sample only.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="25" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Kindly correlate clinically.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="4" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Notes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="36" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Flag:H-High,L-Low]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="396" pageHeight="605" columnWidth="356" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.4641000000000015"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="BillId" class="java.lang.Integer"/>
+	<parameter name="FiscalYear" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["src\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select a.testGroupId,ISNULL((select PrimaryGroupName from TbLabPrimaryGroup where SN=(select ParentId from tblabtestgroup where SN=testGroupId)),'Tube') as GroupName,a.testName,a.rate*a.qty as rate,a.RefundStatus,b.labId,b.RegNo,b.PatientName,b.Age,b.Month,b.day,b.Cabin,b.Sex,b.Mobile,b.DateTime,b.ReportDelivery,(select username from tblogin where user_id=b.CreateBy) as UserName,b.RefferBy,(select Name from tbdoctorinfo where DoctorCode=b.RefferBy) as RefferName,(select Degree from tbdoctorinfo where DoctorCode=b.RefferBy) as Degree ,b.TotalCharge ,b.totalDiscount,b.TotalPayable as ActualPayable,(select ISNULL(sum(Cash),0) from TbLabPaymentHistory where FiscalYear=$P{FiscalYear} and BillNo=$P{BillId} and PaymentStatus='Paid')-(select ISNULL(sum(Cash),0) from TbLabPaymentHistory where FiscalYear=$P{FiscalYear} and BillNo=$P{BillId}  and PaymentStatus='Refund') as TotalPaidAmount from TbLabTestHistory a join TbLabPatient b on b.labId=a.labId and b.FiscalYear=a.FiscalYear where b.FiscalYear=$P{FiscalYear} and  b.labId=$P{BillId} and a.RefundStatus!='1' and a.FiscalYear=$P{FiscalYear} and a.labId=$P{BillId} and a.type='1' order by GroupName]]>
+	</queryString>
+	<field name="testGroupId" class="java.lang.String"/>
+	<field name="GroupName" class="java.lang.String"/>
+	<field name="testName" class="java.lang.String"/>
+	<field name="rate" class="java.math.BigDecimal"/>
+	<field name="RefundStatus" class="java.lang.String"/>
+	<field name="labId" class="java.lang.Integer"/>
+	<field name="RegNo" class="java.lang.String"/>
+	<field name="PatientName" class="java.lang.String"/>
+	<field name="Age" class="java.lang.String"/>
+	<field name="Month" class="java.lang.String"/>
+	<field name="day" class="java.lang.String"/>
+	<field name="Cabin" class="java.lang.String"/>
+	<field name="Sex" class="java.lang.String"/>
+	<field name="Mobile" class="java.lang.String"/>
+	<field name="DateTime" class="java.util.Date"/>
+	<field name="ReportDelivery" class="java.lang.String"/>
+	<field name="UserName" class="java.lang.String"/>
+	<field name="RefferBy" class="java.lang.String"/>
+	<field name="RefferName" class="java.lang.String"/>
+	<field name="Degree" class="java.lang.String"/>
+	<field name="TotalCharge" class="java.math.BigDecimal"/>
+	<field name="totalDiscount" class="java.math.BigDecimal"/>
+	<field name="ActualPayable" class="java.math.BigDecimal"/>
+	<field name="TotalPaidAmount" class="java.math.BigDecimal"/>
+	<variable name="SL" class="java.lang.Integer" resetType="Group" resetGroup="GroupName" calculation="Sum">
+		<variableExpression><![CDATA[1]]></variableExpression>
+	</variable>
+	<group name="GroupName" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{GroupName}]]></groupExpression>
+		<groupHeader>
+			<band height="195">
+				<staticText>
+					<reportElement x="0" y="145" width="356" height="17"/>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[(Lab Slip)]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="141" width="356" height="1"/>
+					<graphicElement>
+						<pen lineStyle="Dashed" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="6" y="179" width="30" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Calibri" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="33" y="179" width="178" height="13"/>
+					<box leftPadding="3"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Calibri" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Test Name]]></text>
+				</staticText>
+				<line>
+					<reportElement x="7" y="192" width="348" height="1"/>
+				</line>
+				<rectangle>
+					<reportElement x="139" y="59" width="82" height="14" forecolor="#CCCCCC"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="139" y="59" width="82" height="14"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Money Receipt]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="229" y="92" width="20" height="15"/>
+					<textElement>
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="96" y="107" width="28" height="15"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[Mobile]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="55" y="92" width="152" height="15"/>
+					<textElement>
+						<font fontName="Calibri" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{PatientName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="4" y="107" width="40" height="15"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[Sex]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="55" y="76" width="152" height="15"/>
+					<textElement>
+						<font fontName="Calibri" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{labId}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="4" y="123" width="40" height="15"/>
+					<textElement>
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[Refd By]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="257" y="107" width="22" height="15"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( $F{Age}!="" ? $F{Age}+"Y" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="251" y="92" width="6" height="15"/>
+					<textElement textAlignment="Center">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="47" y="92" width="6" height="15"/>
+					<textElement textAlignment="Center">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<componentElement>
+					<reportElement x="220" y="76" width="137" height="14"/>
+					<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
+						<jr:codeExpression><![CDATA[$F{labId}]]></jr:codeExpression>
+					</jr:barbecue>
+				</componentElement>
+				<staticText>
+					<reportElement x="229" y="107" width="20" height="15"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[Age]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="47" y="107" width="6" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="4" y="77" width="40" height="15"/>
+					<textElement>
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[Bill No]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="47" y="123" width="6" height="15"/>
+					<textElement textAlignment="Center">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="55" y="123" width="302" height="15"/>
+					<textElement>
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{RefferName}+" ("+($F{Degree}==null?"":$F{Degree})+")"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="56" y="107" width="33" height="15"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{Sex}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="4" y="92" width="40" height="15"/>
+					<textElement>
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[Name]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="133" y="107" width="96" height="16"/>
+					<textElement>
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{Mobile}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="125" y="108" width="6" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="279" y="107" width="26" height="15"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[Month]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="251" y="107" width="6" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="311" y="107" width="20" height="15"/>
+					<textElement>
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[( $F{Month}!="" ? $F{Month}+"M" : "" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="306" y="107" width="6" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="82" y="160" width="212" height="20"/>
+					<textElement textAlignment="Center">
+						<font isUnderline="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["DEPARTMENT : "+$F{GroupName}.toUpperCase()]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="36">
+				<textField>
+					<reportElement x="7" y="12" width="160" height="14"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Delivery : "+$F{ReportDelivery}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="246" y="14" width="40" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Served By-]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="288" y="13" width="70" height="12"/>
+					<textElement>
+						<font size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{UserName}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="1" y="26" width="355" height="2"/>
+					<graphicElement>
+						<pen lineStyle="Dashed" lineColor="#999999"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="37" y="-1" width="318" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{testName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="10" y="10" width="347" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="6" y="-3" width="16" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{SL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="18" y="9" width="124" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Developed By-www.cursorbd.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="9" width="40" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Print Time]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="275" y="8" width="72" height="12"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

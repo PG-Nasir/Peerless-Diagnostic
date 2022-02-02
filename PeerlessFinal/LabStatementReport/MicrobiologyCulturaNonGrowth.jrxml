@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.128947860107555"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="435"/>
+	<field name="LabNo" class="java.lang.String"/>
+	<field name="PatientName" class="java.lang.String"/>
+	<field name="Age" class="java.lang.String"/>
+	<field name="Gender" class="java.lang.String"/>
+	<field name="OrderDate" class="java.lang.String"/>
+	<field name="ReportingDate" class="java.lang.String"/>
+	<field name="MainTestName" class="java.lang.String"/>
+	<field name="Sample" class="java.lang.String"/>
+	<field name="Consultant" class="java.lang.String"/>
+	<field name="Degree" class="java.lang.String"/>
+	<field name="TestName" class="java.lang.String"/>
+	<field name="Result" class="java.lang.String"/>
+	<field name="NormalRange" class="java.lang.String"/>
+	<field name="TestList" class="java.lang.String"/>
+	<field name="Flag" class="java.lang.String"/>
+	<field name="LabIncharge" class="java.lang.String"/>
+	<field name="CheckedBy" class="java.lang.String"/>
+	<field name="LabInchargeDegree" class="java.lang.String"/>
+	<field name="CheckedByDegree" class="java.lang.String"/>
+	<field name="DoctorName1" class="java.lang.String"/>
+	<field name="DoctorName1Degree" class="java.lang.String"/>
+	<field name="DoctorName2" class="java.lang.String"/>
+	<field name="DoctorName2Degree" class="java.lang.String"/>
+	<field name="AmikacinA" class="java.lang.String"/>
+	<field name="AmikacinB" class="java.lang.String"/>
+	<field name="AmoxycillinA" class="java.lang.String"/>
+	<field name="AmoxycillinB" class="java.lang.String"/>
+	<field name="AmoxyClaveA" class="java.lang.String"/>
+	<field name="AmoxyClaveB" class="java.lang.String"/>
+	<field name="AzithromkyciA" class="java.lang.String"/>
+	<field name="AzithromkyciB" class="java.lang.String"/>
+	<field name="AztreonamA" class="java.lang.String"/>
+	<field name="AztreonamB" class="java.lang.String"/>
+	<field name="CefaclorA" class="java.lang.String"/>
+	<field name="CefaclorB" class="java.lang.String"/>
+	<field name="CefeprimeA" class="java.lang.String"/>
+	<field name="CefeprimeB" class="java.lang.String"/>
+	<field name="CefiximeA" class="java.lang.String"/>
+	<field name="CefiximeB" class="java.lang.String"/>
+	<field name="CefotazimeA" class="java.lang.String"/>
+	<field name="CefotazimeB" class="java.lang.String"/>
+	<field name="CefoxitinA" class="java.lang.String"/>
+	<field name="CefoxitinB" class="java.lang.String"/>
+	<field name="CeftaidimeA" class="java.lang.String"/>
+	<field name="CeftaidimeB" class="java.lang.String"/>
+	<field name="CeftraixoneA" class="java.lang.String"/>
+	<field name="CeftraixoneB" class="java.lang.String"/>
+	<field name="CefuroximeA" class="java.lang.String"/>
+	<field name="CefuroximeB" class="java.lang.String"/>
+	<field name="CephradineA" class="java.lang.String"/>
+	<field name="CephradineB" class="java.lang.String"/>
+	<field name="ChloramphenicolA" class="java.lang.String"/>
+	<field name="ChloramphenicolB" class="java.lang.String"/>
+	<field name="CloxacillinA" class="java.lang.String"/>
+	<field name="CloxacillinB" class="java.lang.String"/>
+	<field name="CiprofloxacinA" class="java.lang.String"/>
+	<field name="CiprofloxacinB" class="java.lang.String"/>
+	<field name="ColistinA" class="java.lang.String"/>
+	<field name="ColistinB" class="java.lang.String"/>
+	<field name="CoTrimoxazoleA" class="java.lang.String"/>
+	<field name="CoTrimoxazoleB" class="java.lang.String"/>
+	<field name="DoxkycyclineA" class="java.lang.String"/>
+	<field name="DoxkycyclineB" class="java.lang.String"/>
+	<field name="ErythromycinA" class="java.lang.String"/>
+	<field name="ErythromycinB" class="java.lang.String"/>
+	<field name="GentamicinA" class="java.lang.String"/>
+	<field name="GentamicinB" class="java.lang.String"/>
+	<field name="ImipenemA" class="java.lang.String"/>
+	<field name="ImipenemB" class="java.lang.String"/>
+	<field name="LevofloxacinA" class="java.lang.String"/>
+	<field name="LevofloxacinB" class="java.lang.String"/>
+	<field name="LinezolidA" class="java.lang.String"/>
+	<field name="LinezolidB" class="java.lang.String"/>
+	<field name="MecillinamA" class="java.lang.String"/>
+	<field name="MecillinamB" class="java.lang.String"/>
+	<field name="MeropenemA" class="java.lang.String"/>
+	<field name="MeropenemB" class="java.lang.String"/>
+	<field name="NalidixicA" class="java.lang.String"/>
+	<field name="NalidixicB" class="java.lang.String"/>
+	<field name="NeomycinA" class="java.lang.String"/>
+	<field name="NeomycinB" class="java.lang.String"/>
+	<field name="NetilmicinA" class="java.lang.String"/>
+	<field name="NetilmicinB" class="java.lang.String"/>
+	<field name="NitrofurantoinA" class="java.lang.String"/>
+	<field name="NitrofurantoinB" class="java.lang.String"/>
+	<field name="PenicillinA" class="java.lang.String"/>
+	<field name="PenicillinB" class="java.lang.String"/>
+	<field name="PiperacililnA" class="java.lang.String"/>
+	<field name="PiperacililnB" class="java.lang.String"/>
+	<field name="TazobactumA" class="java.lang.String"/>
+	<field name="TazobactumB" class="java.lang.String"/>
+	<field name="PolymyxinA" class="java.lang.String"/>
+	<field name="PolymyxinB" class="java.lang.String"/>
+	<field name="TetracyclineA" class="java.lang.String"/>
+	<field name="TetracyclineB" class="java.lang.String"/>
+	<field name="VancomycinA" class="java.lang.String"/>
+	<field name="VancomycinB" class="java.lang.String"/>
+	<field name="OrganismA" class="java.lang.String"/>
+	<field name="OrganismB" class="java.lang.String"/>
+	<variable name="TestList" class="java.lang.String" resetType="Group" resetGroup="MainTestGp" calculation="Sum">
+		<variableExpression><![CDATA[$F{MainTestName}]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<group name="MainTestGp">
+		<groupExpression><![CDATA[$F{MainTestName}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="233" splitType="Stretch">
+			<rectangle>
+				<reportElement x="8" y="100" width="4" height="61" backcolor="#999999"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="15" y="80" width="100" height="16"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patient Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="99" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Lab No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="99" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="113" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Patient Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="113" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="127" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="127" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="142" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="141" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="7" y="179" width="534" height="1"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="319" y="153" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporting Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="139" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Order Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="153" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="99" width="61" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Physician]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="99" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="139" width="5" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="310" y="102" width="4" height="61" backcolor="#999999"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="319" y="80" width="100" height="16"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Physician Details]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="4" y="185" width="133" height="14"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA["18-"+$F{LabNo}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="16" y="182" width="529" height="26"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Microbiological Report]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="4" y="208" width="538" height="22"/>
+				<graphicElement>
+					<pen lineColor="#CCCCCC"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="208" width="37" height="22"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tests]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="208" width="5" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="209" width="39" height="22"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sample]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="87" y="99" width="139" height="14"/>
+				<textElement>
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["18-"+$F{LabNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="87" y="113" width="141" height="14"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PatientName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="87" y="127" width="142" height="14"/>
+				<textElement>
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Age}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="87" y="142" width="139" height="14"/>
+				<textElement>
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Gender}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="385" y="100" width="153" height="13"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Consultant}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="385" y="112" width="168" height="29"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Degree}.replace( '#', '\n' ).trim()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="385" y="139" width="100" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OrderDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="385" y="153" width="100" height="14"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ReportingDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="509" y="210" width="41" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Sample}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="47" y="209" width="347" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TestList}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="503" y="209" width="5" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="401" splitType="Stretch">
+			<staticText>
+				<reportElement x="36" y="0" width="114" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ORGANISM ISOLATED:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="1" width="12" height="15"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="15" width="12" height="15"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[B]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="167" y="4" width="330" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OrganismA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="167" y="17" width="330" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{OrganismB}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="15" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Results relate to the sample only.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="25" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Kindly correlate clinically.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="4" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Notes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="36" width="288" height="14"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[Flag:H-High,L-Low]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="1008" pageHeight="576" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10">
+	<property name="ireport.zoom" value="1.4641000000000068"/>
+	<property name="ireport.x" value="303"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA["select productName from TbIndoorItemInformation order by itemType,productName"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{sql}]]>
+	</queryString>
+	<field name="productName" class="java.lang.String"/>
+	<variable name="sl" class="java.lang.Number" calculation="Sum">
+		<variableExpression><![CDATA[1]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="-6" y="0" width="968" height="18"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SURGISCOPE HOSPITAL LTD. (Indoor Pharmacy)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="17" width="351" height="18"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daily Supply/Consumption Record]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="881" y="22" width="85" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Year---------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="781" y="22" width="100" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Month----------------------------]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-1" width="967" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="23" width="967" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="285" y="-1" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="360" y="-1" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="430" y="-1" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="506" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="577" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="645" y="-1" width="1" height="24"/>
+			</line>
+			<line>
+				<reportElement x="714" y="0" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="780" y="-1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="849" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="966" y="0" width="1" height="23"/>
+			</line>
+			<staticText>
+				<reportElement x="286" y="0" width="74" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="0" width="69" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="0" width="75" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="507" y="0" width="70" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="578" y="0" width="67" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="715" y="0" width="65" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="781" y="0" width="68" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="850" y="0" width="68" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<line>
+				<reportElement x="206" y="-1" width="1" height="25"/>
+			</line>
+			<staticText>
+				<reportElement x="207" y="0" width="78" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="919" y="0" width="47" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="0" width="166" height="23"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="39" y="-1" width="1" height="22"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="0" width="38" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL#]]></text>
+			</staticText>
+			<line>
+				<reportElement x="207" y="12" width="759" height="1"/>
+			</line>
+			<line>
+				<reportElement x="233" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="259" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="312" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="338" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="383" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="407" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="453" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="480" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="532" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="555" y="13" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="600" y="12" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="623" y="12" width="1" height="12"/>
+			</line>
+			<staticText>
+				<reportElement x="646" y="0" width="68" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<line>
+				<reportElement x="668" y="12" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="691" y="12" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="736" y="12" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="757" y="12" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="780" y="12" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="803" y="12" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="826" y="12" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="849" y="12" width="1" height="12"/>
+			</line>
+			<staticText>
+				<reportElement x="207" y="13" width="26" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="13" width="25" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="13" width="25" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="13" width="21" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="13" width="25" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="13" width="26" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="13" width="24" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="481" y="13" width="25" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="13" width="26" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="556" y="13" width="21" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="533" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="507" y="13" width="25" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="624" y="13" width="21" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="601" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="578" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="692" y="13" width="23" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="669" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="646" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="758" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="737" y="13" width="20" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="715" y="13" width="21" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="827" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="781" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="804" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<line>
+				<reportElement x="918" y="0" width="1" height="12"/>
+			</line>
+			<staticText>
+				<reportElement x="873" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="896" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="850" y="13" width="22" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-1" width="967" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="12" width="967" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="285" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="312" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="338" y="0" width="1" height="11"/>
+			</line>
+			<line>
+				<reportElement x="360" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="383" y="-1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="407" y="-1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="430" y="-1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="453" y="0" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="480" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="506" y="0" width="1" height="11"/>
+			</line>
+			<line>
+				<reportElement x="532" y="0" width="1" height="11"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="11"/>
+			</line>
+			<line>
+				<reportElement x="577" y="0" width="1" height="11"/>
+			</line>
+			<line>
+				<reportElement x="600" y="0" width="1" height="11"/>
+			</line>
+			<line>
+				<reportElement x="623" y="0" width="1" height="11"/>
+			</line>
+			<line>
+				<reportElement x="645" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="668" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="691" y="0" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="714" y="0" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="736" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="757" y="0" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="780" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="826" y="0" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="849" y="0" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="966" y="0" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="872" y="-11" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="895" y="-11" width="1" height="23"/>
+			</line>
+			<line>
+				<reportElement x="918" y="-12" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement x="803" y="0" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="259" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="233" y="0" width="1" height="12"/>
+			</line>
+			<line>
+				<reportElement x="206" y="-1" width="1" height="13"/>
+			</line>
+			<line>
+				<reportElement x="39" y="-1" width="1" height="13"/>
+			</line>
+			<textField pattern="#,##0">
+				<reportElement x="1" y="0" width="38" height="12"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Number"><![CDATA[$V{sl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="0" width="166" height="12"/>
+				<box leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

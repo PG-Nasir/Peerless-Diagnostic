@@ -1,0 +1,1517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RefferComissionStatementDateWise" language="groovy" pageWidth="1296" pageHeight="612" orientation="Landscape" columnWidth="1256" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.5131581182307086"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA["select RefferName,sum(Day1) as Day1,sum(Day2) as Day2,sum(Day3) as Day3,sum(Day4) as Day4,sum(Day5) as Day5,sum(Day6) as Day6,sum(Day7) as Day7,sum(Day8) as Day8,sum(Day9) as Day9,sum(Day10) as Day10,sum(Day11) as Day11,sum(Day12) as Day12,sum(Day13) as Day13,sum(Day14) as Day14,sum(Day15) as Day15,sum(Day16) as Day16,sum(Day17) as Day17,sum(Day18) as Day18,sum(Day19) as Day19,sum(Day20) as Day20,sum(Day21) as Day21,sum(Day22) as Day22,sum(Day23) as Day23,sum(Day24) as Day24,sum(Day25) as Day25,sum(Day26) as Day26,sum(Day27) as Day27,sum(Day28) as Day28,sum(Day29) as Day29,sum(Day30) as Day30,sum(Day31) as Day31 from TbFinalRefferWiseComissionStatementDateWise('2017-07-01','2017-08-31')  group by RefferName"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{sql}]]>
+	</queryString>
+	<field name="RefferName" class="java.lang.String"/>
+	<field name="Day1" class="java.math.BigDecimal"/>
+	<field name="Day2" class="java.math.BigDecimal"/>
+	<field name="Day3" class="java.math.BigDecimal"/>
+	<field name="Day4" class="java.math.BigDecimal"/>
+	<field name="Day5" class="java.math.BigDecimal"/>
+	<field name="Day6" class="java.math.BigDecimal"/>
+	<field name="Day7" class="java.math.BigDecimal"/>
+	<field name="Day8" class="java.math.BigDecimal"/>
+	<field name="Day9" class="java.math.BigDecimal"/>
+	<field name="Day10" class="java.math.BigDecimal"/>
+	<field name="Day11" class="java.math.BigDecimal"/>
+	<field name="Day12" class="java.math.BigDecimal"/>
+	<field name="Day13" class="java.math.BigDecimal"/>
+	<field name="Day14" class="java.math.BigDecimal"/>
+	<field name="Day15" class="java.math.BigDecimal"/>
+	<field name="Day16" class="java.math.BigDecimal"/>
+	<field name="Day17" class="java.math.BigDecimal"/>
+	<field name="Day18" class="java.math.BigDecimal"/>
+	<field name="Day19" class="java.math.BigDecimal"/>
+	<field name="Day20" class="java.math.BigDecimal"/>
+	<field name="Day21" class="java.math.BigDecimal"/>
+	<field name="Day22" class="java.math.BigDecimal"/>
+	<field name="Day23" class="java.math.BigDecimal"/>
+	<field name="Day24" class="java.math.BigDecimal"/>
+	<field name="Day25" class="java.math.BigDecimal"/>
+	<field name="Day26" class="java.math.BigDecimal"/>
+	<field name="Day27" class="java.math.BigDecimal"/>
+	<field name="Day28" class="java.math.BigDecimal"/>
+	<field name="Day29" class="java.math.BigDecimal"/>
+	<field name="Day30" class="java.math.BigDecimal"/>
+	<field name="Day31" class="java.math.BigDecimal"/>
+	<variable name="TSL" class="java.lang.Number" calculation="Sum">
+		<variableExpression><![CDATA[1]]></variableExpression>
+	</variable>
+	<variable name="dTotal" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{Day1}+$F{Day2}+$F{Day3}+$F{Day4}+$F{Day5}+$F{Day6}+$F{Day7}+$F{Day8}+$F{Day9}+$F{Day10}+$F{Day11}+$F{Day12}+$F{Day13}+$F{Day14}+$F{Day15}+$F{Day16}+$F{Day17}+$F{Day18}+$F{Day19}+$F{Day20}+$F{Day21}+$F{Day22}+$F{Day23}+$F{Day24}+$F{Day25}+$F{Day26}+$F{Day27}+$F{Day28}+$F{Day29}+$F{Day30}+$F{Day31}]]></variableExpression>
+	</variable>
+	<variable name="t1amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day1}]]></variableExpression>
+	</variable>
+	<variable name="t16amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day16}]]></variableExpression>
+	</variable>
+	<variable name="t2amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day2}]]></variableExpression>
+	</variable>
+	<variable name="t3amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day3}]]></variableExpression>
+	</variable>
+	<variable name="t4amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day4}]]></variableExpression>
+	</variable>
+	<variable name="t5amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day5}]]></variableExpression>
+	</variable>
+	<variable name="t6amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day6}]]></variableExpression>
+	</variable>
+	<variable name="t7amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day7}]]></variableExpression>
+	</variable>
+	<variable name="t8amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day8}]]></variableExpression>
+	</variable>
+	<variable name="t9amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day9}]]></variableExpression>
+	</variable>
+	<variable name="t10amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day10}]]></variableExpression>
+	</variable>
+	<variable name="t11amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day11}]]></variableExpression>
+	</variable>
+	<variable name="t12amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day12}]]></variableExpression>
+	</variable>
+	<variable name="t13amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day13}]]></variableExpression>
+	</variable>
+	<variable name="t14amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day14}]]></variableExpression>
+	</variable>
+	<variable name="t15amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day15}]]></variableExpression>
+	</variable>
+	<variable name="t17amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day17}]]></variableExpression>
+	</variable>
+	<variable name="t18amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day18}]]></variableExpression>
+	</variable>
+	<variable name="t19amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day19}]]></variableExpression>
+	</variable>
+	<variable name="t20amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day20}]]></variableExpression>
+	</variable>
+	<variable name="t21amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day21}]]></variableExpression>
+	</variable>
+	<variable name="t22amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day22}]]></variableExpression>
+	</variable>
+	<variable name="t23amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day23}]]></variableExpression>
+	</variable>
+	<variable name="t24amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day24}]]></variableExpression>
+	</variable>
+	<variable name="t25amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day25}]]></variableExpression>
+	</variable>
+	<variable name="t26amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day26}]]></variableExpression>
+	</variable>
+	<variable name="t27amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day27}]]></variableExpression>
+	</variable>
+	<variable name="t28amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day28}]]></variableExpression>
+	</variable>
+	<variable name="t29amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day29}]]></variableExpression>
+	</variable>
+	<variable name="t30amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day30}]]></variableExpression>
+	</variable>
+	<variable name="t31amt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day31}]]></variableExpression>
+	</variable>
+	<variable name="tAmt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Day1}+$F{Day2}+$F{Day3}+$F{Day4}+$F{Day5}+$F{Day6}+$F{Day7}+$F{Day8}+$F{Day9}+$F{Day10}+$F{Day11}+$F{Day12}+$F{Day13}+$F{Day14}+$F{Day15}+$F{Day16}+$F{Day17}+$F{Day18}+$F{Day19}+$F{Day20}+$F{Day21}+$F{Day22}+$F{Day23}+$F{Day24}+$F{Day25}+$F{Day26}+$F{Day27}+$F{Day28}+$F{Day29}+$F{Day30}+$F{Day31}]]></variableExpression>
+	</variable>
+	<variable name="tGrand" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{t1amt}+$V{t2amt}+$V{t3amt}+$V{t4amt}+$V{t5amt}+$V{t6amt}+$V{t7amt}+$V{t8amt}+$V{t9amt}+$V{t10amt}+$V{t11amt}+$V{t12amt}+$V{t13amt}+$V{t14amt}+$V{t15amt}+$V{t16amt}+$V{t17amt}+$V{t18amt}+$V{t19amt}+$V{t20amt}+$V{t21amt}+$V{t22amt}+$V{t23amt}+$V{t24amt}+$V{t25amt}+$V{t26amt}+$V{t27amt}+$V{t28amt}+$V{t29amt}+$V{t30amt}+$V{t31amt}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="530" y="92" width="173" height="15" forecolor="#FFFFFF" backcolor="#666666"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[All Referal Comission Statement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="674" y="49" width="5" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="638" y="76" width="37" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Web]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="677" y="49" width="103" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[01821533666]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="76" width="5" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="31" width="130" height="11"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PANCHLAISH (UNIT-1)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="638" y="31" width="164" height="11"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KATALGONJ (UNIT-2)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="67" width="37" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="49" width="103" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[01711275955]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="41" width="176" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[53/1,Panchlaish R/A,Chittagong-4203,Bangladesh]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="674" y="76" width="5" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="638" y="67" width="37" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="677" y="76" width="103" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[www.surgiscopehospital.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="76" width="103" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[www.surgiscopehospital.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="58" width="36" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telephone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="677" y="58" width="103" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[880-31-255101-4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="677" y="67" width="103" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[surgihospital@yahoo.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="638" y="49" width="24" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hotline]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="638" y="59" width="36" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telephone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="67" width="5" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="638" y="41" width="176" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[445/466,Katalgong,Chittagong-4203,Bangladesh]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="8" width="351" height="23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SURGISCOPE HOSPITAL LTD.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="67" width="103" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[surgihospital@yahoo.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="76" width="37" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Web]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="58" width="103" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[880-31-652038,652721,653882]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="50" width="24" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hotline]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="674" y="58" width="5" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="58" width="5" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="49" width="5" height="9"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="143" y="7" width="70" height="70"/>
+				<imageExpression class="java.lang.String"><![CDATA["D:\\Nasir Workspace\\New folder\\SurgiscopeLastestFile\\src\\rptlogo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="0" width="1255" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="15" width="1256" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="233" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="268" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="303" y="1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="337" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="372" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="406" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="439" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="474" y="1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="509" y="0" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="544" y="1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="579" y="1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="614" y="1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="649" y="1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="684" y="1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="719" y="1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="754" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="789" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="824" y="1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="859" y="1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="894" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="929" y="1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="964" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1034" y="1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1069" y="1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1255" y="1" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="1104" y="1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1139" y="1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1174" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1210" y="1" width="1" height="15"/>
+			</line>
+			<staticText>
+				<reportElement x="234" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="1" width="32" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="1" width="34" height="15"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="545" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[13]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[14]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="615" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[16]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="685" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[17]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="720" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[18]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="755" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[19]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="790" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="825" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="860" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[22]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="895" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[23]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="930" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[24]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="965" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[25]]></text>
+			</staticText>
+			<line>
+				<reportElement x="999" y="1" width="1" height="15"/>
+			</line>
+			<staticText>
+				<reportElement x="1000" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[26]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1035" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[27]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1070" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[28]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1105" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[29]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1140" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[30]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1175" y="1" width="35" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[31]]></text>
+			</staticText>
+			<line>
+				<reportElement x="198" y="0" width="1" height="16"/>
+			</line>
+			<staticText>
+				<reportElement x="199" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<line>
+				<reportElement x="163" y="1" width="1" height="14"/>
+			</line>
+			<staticText>
+				<reportElement x="164" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<line>
+				<reportElement x="129" y="0" width="1" height="16"/>
+			</line>
+			<staticText>
+				<reportElement x="129" y="1" width="34" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1211" y="1" width="44" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="1" width="108" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reffer Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="1" width="1" height="15"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="1" width="19" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[#SL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="-1" width="1255" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="14" width="1256" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="233" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="268" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="303" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="337" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="372" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="406" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="439" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="474" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="509" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="544" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="579" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="614" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="649" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="684" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="719" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="754" y="-1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="789" y="-1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="824" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="859" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="894" y="-1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="929" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="964" y="-1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1034" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1069" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1255" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="1104" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1139" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1174" y="-1" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="1210" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="999" y="0" width="1" height="15"/>
+			</line>
+			<line>
+				<reportElement x="198" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="163" y="0" width="1" height="14"/>
+			</line>
+			<line>
+				<reportElement x="129" y="-1" width="1" height="16"/>
+			</line>
+			<line>
+				<reportElement x="20" y="0" width="1" height="15"/>
+			</line>
+			<textField>
+				<reportElement x="21" y="0" width="108" height="14"/>
+				<box leftPadding="2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{RefferName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="1" y="0" width="19" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Number"><![CDATA[$V{TSL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="130" y="0" width="33" height="14">
+					<printWhenExpression><![CDATA[$F{Day1}.doubleValue() == 0.0 ? null :$F{Day1}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="164" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day2}.doubleValue() == 0.0 ? null :$F{Day2}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="199" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day3}.doubleValue() == 0.0 ? null :$F{Day3}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="234" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day4}.doubleValue() == 0.0 ? null :$F{Day4}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="269" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day5}.doubleValue() == 0.0 ? null :$F{Day5}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="304" y="0" width="33" height="14">
+					<printWhenExpression><![CDATA[$F{Day6}.doubleValue() == 0.0 ? null :$F{Day6}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="338" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day7}.doubleValue() == 0.0 ? null :$F{Day7}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day7}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="373" y="0" width="33" height="14">
+					<printWhenExpression><![CDATA[$F{Day8}.doubleValue() == 0.0 ? null :$F{Day8}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="407" y="0" width="32" height="14">
+					<printWhenExpression><![CDATA[$F{Day9}.doubleValue() == 0.0 ? null :$F{Day9}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day9}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="440" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day10}.doubleValue() == 0.0 ? null :$F{Day10}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day10}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="475" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day11}.doubleValue() == 0.0 ? null :$F{Day11}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day11}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="510" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day12}.doubleValue() == 0.0 ? null :$F{Day12}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day12}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="545" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day13}.doubleValue() == 0.0 ? null :$F{Day13}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day13}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="580" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day14}.doubleValue() == 0.0 ? null :$F{Day14}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day14}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="615" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day15}.doubleValue() == 0.0 ? null :$F{Day15}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day15}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="650" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day16}.doubleValue() == 0.0 ? null :$F{Day16}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day16}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="685" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day17}.doubleValue() == 0.0 ? null :$F{Day17}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day17}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="720" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day18}.doubleValue() == 0.0 ? null :$F{Day18}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day18}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="755" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day19}.doubleValue() == 0.0 ? null :$F{Day19}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day19}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="790" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day20}.doubleValue() == 0.0 ? null :$F{Day20}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day20}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="825" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day21}.doubleValue() == 0.0 ? null :$F{Day21}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day21}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="860" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day22}.doubleValue() == 0.0 ? null :$F{Day22}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day22}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="895" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day23}.doubleValue() == 0.0 ? null :$F{Day23}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day23}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="930" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day24}.doubleValue() == 0.0 ? null :$F{Day24}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day24}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="965" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day25}.doubleValue() == 0.0 ? null :$F{Day25}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day25}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1000" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day26}.doubleValue() == 0.0 ? null :$F{Day26}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day26}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1035" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day27}.doubleValue() == 0.0 ? null :$F{Day27}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day27}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1070" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day28}.doubleValue() == 0.0 ? null :$F{Day28}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day28}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1105" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day29}.doubleValue() == 0.0 ? null :$F{Day29}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day29}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1140" y="0" width="34" height="14">
+					<printWhenExpression><![CDATA[$F{Day30}.doubleValue() == 0.0 ? null :$F{Day30}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day30}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1175" y="0" width="35" height="14">
+					<printWhenExpression><![CDATA[$F{Day31}.doubleValue() == 0.0 ? null :$F{Day31}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{Day31}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1211" y="0" width="44" height="14">
+					<printWhenExpression><![CDATA[$V{dTotal}.doubleValue() == 0.0 ? null :$V{dTotal}.doubleValue()]]></printWhenExpression>
+				</reportElement>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{dTotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="38" splitType="Stretch">
+			<textField pattern="#,##0.00">
+				<reportElement x="130" y="6" width="33" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t1amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="650" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t16amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="164" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t2amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="199" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t3amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="234" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t4amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="269" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t5amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="304" y="6" width="33" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t6amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="338" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t7amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="374" y="6" width="32" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t8amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="407" y="6" width="32" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t9amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="440" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t10amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="475" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t11amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="510" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t12amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="545" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t13amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="580" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t14amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="615" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t15amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="685" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t17amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="720" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t18amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="755" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t19amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="790" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t20amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="825" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t21amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="860" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t22amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="895" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t23amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="930" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t24amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="965" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t25amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1000" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t26amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1035" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t27amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1070" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t28amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1105" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t29amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1140" y="6" width="34" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t30amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1175" y="6" width="35" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{t31amt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="1211" y="19" width="44" height="13"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{tAmt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="6" width="103" height="13"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Group Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="2" width="1255" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1119" y="19" width="53" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Group Total :]]></text>
+			</staticText>
+			<textField pattern="#,##0.00">
+				<reportElement x="1172" y="19" width="38" height="14"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{tGrand}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement x="314" y="0" width="156" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Developed By-www.cursorbd.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="869" y="0" width="20" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="887" y="0" width="70" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
